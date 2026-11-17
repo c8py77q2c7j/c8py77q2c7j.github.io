@@ -1,0 +1,1111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>禁止的爱善良-伦理剧角色与观看指南</title>
+<meta name="description" content="禁止的爱善良是一部围绕家庭伦理与宽恕展开的剧集专题，梳理角色关系、分集线索、名场面与观众争论，含观看顺序指南、人物动机解析、评论摘录与 FAQ 答疑，帮助看清善良与越界之间的边界。">
+<meta name="keywords" content="禁止的爱善良">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f4858'/%3E%3Cpath d='M20 44V22h6l6 12 6-12h6v22h-5V31l-7 13-7-13v13z' fill='%23f4d9a8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#22303c;
+  --ink-2:#3d4f5e;
+  --muted:#68788a;
+  --line:#d9e0e6;
+  --bg:#f5f3ee;
+  --paper:#ffffff;
+  --main:#2f4858;
+  --main-soft:#e4ebe9;
+  --accent:#a8574a;
+  --accent-soft:#f7e6e0;
+  --gold:#b3843f;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(34,48,60,.08);
+  --shadow-hover:0 6px 20px rgba(34,48,60,.13);
+  --space:1rem;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --maxw:1180px;
+  --sticky-offset:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-offset)}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);
+  line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--main);text-decoration:none}
+a:hover{color:var(--accent)}
+h1,h2,h3,h4{line-height:1.35;margin:0;color:var(--ink);font-weight:700}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 .9em;padding-left:1.3em}
+li{margin-bottom:.35em}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* 吸顶：公告条 + 页头 */
+.sticky-stack{position:sticky;top:0;z-index:60}
+.announce{
+  background:var(--main);color:#eef3f1;font-size:13px;
+  padding:7px 0;letter-spacing:.02em;
+}
+.announce .wrap{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;justify-content:center;text-align:center}
+.announce b{color:#f4d9a8;font-weight:700}
+.announce .dot{width:5px;height:5px;border-radius:50%;background:#f4d9a8;display:inline-block;margin-right:6px;vertical-align:1px}
+.site-head{background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+.head-inner{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand svg{width:38px;height:38px;flex-shrink:0}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:.02em;color:var(--main)}
+.brand-sub{font-size:11px;color:var(--muted);letter-spacing:.14em;display:block;line-height:1.2}
+.main-nav{margin-left:auto}
+.nav-toggle{
+  display:none;align-items:center;gap:6px;background:var(--main-soft);color:var(--main);
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:7px 13px;font-size:14px;cursor:pointer;
+}
+.nav-list{display:flex;flex-wrap:wrap;gap:2px 4px;list-style:none;margin:0;padding:0}
+.nav-list a{display:block;padding:7px 11px;border-radius:var(--radius-sm);font-size:14.5px;color:var(--ink-2);transition:background .2s,color .2s,transform .2s}
+.nav-list a:hover,.nav-list a:focus-visible{background:var(--main-soft);color:var(--main);transform:translateY(-2px)}
+.head-extra{display:flex;align-items:center;gap:8px}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:172px;padding:7px 30px 7px 11px;border:1px solid var(--line);border-radius:20px;
+  font-size:14px;background:#fbfaf7;color:var(--ink);
+}
+.search-box input:focus{border-color:var(--main);background:#fff}
+.search-box .sicon{position:absolute;right:9px;color:var(--muted);pointer-events:none;font-size:14px}
+.search-feedback{font-size:12.5px;color:var(--accent);position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 9px;box-shadow:var(--shadow);display:none;white-space:nowrap;z-index:70}
+.search-feedback.show{display:block}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;color:#f2f5f3;
+  background:linear-gradient(135deg,#2f4858 0%,#3d5a63 55%,#4e6e6a 100%);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 82% 18%,rgba(244,217,168,.16),transparent 46%),
+             radial-gradient(circle at 12% 84%,rgba(168,87,74,.22),transparent 52%);
+}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center;padding:56px 0 60px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.14em;color:#f4d9a8;border:1px solid rgba(244,217,168,.45);padding:5px 12px;border-radius:20px;margin-bottom:18px}
+.hero h1{font-size:clamp(30px,4.4vw,46px);color:#fff;letter-spacing:.03em;margin-bottom:16px}
+.hero h1 .hl{color:#f4d9a8}
+.hero-lead{font-size:16.5px;color:#dbe5e2;max-width:33em;margin-bottom:24px}
+.hero-lead strong{color:#fff;font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;padding:11px 22px;border-radius:26px;
+  font-size:15px;font-weight:600;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;
+}
+.btn-primary{background:#f4d9a8;color:#2f4858}
+.btn-primary:hover{background:#ffe9c2;color:#2f4858;transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.btn-ghost{background:transparent;color:#eef3f1;border-color:rgba(255,255,255,.5)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff;transform:translateY(-2px)}
+.hero-stats{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.hero-stats .st b{display:block;font-size:22px;color:#f4d9a8;line-height:1.2}
+.hero-stats .st span{font-size:12.5px;color:#c6d3cf;letter-spacing:.04em}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art svg{width:100%;max-width:400px;height:auto;filter:drop-shadow(0 16px 30px rgba(0,0,0,.28))}
+
+/* 布局：双栏标准 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 296px;gap:34px;padding:38px 0 20px;align-items:start}
+.main-col{min-width:0}
+.side-col{position:relative;min-width:0}
+
+section.block{margin-bottom:44px;scroll-margin-top:var(--sticky-offset)}
+.block-head{margin-bottom:18px;border-left:4px solid var(--accent);padding-left:12px}
+.block-head h2{font-size:23px}
+.block-kicker{font-size:12.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;display:block;margin-top:3px}
+.sub-title{font-size:17px;margin:22px 0 10px}
+.sec-note{font-size:13.5px;color:var(--muted)}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+.card h3{font-size:16.5px;margin-bottom:6px}
+.card p{margin-bottom:0;font-size:14.5px;color:var(--ink-2)}
+.card .meta{font-size:12.5px;color:var(--muted);margin-bottom:6px;letter-spacing:.03em}
+.hover-raise{transition:transform .2s,box-shadow .2s}
+.hover-raise:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
+.overview-main{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.overview-main p{font-size:15px}
+.fact-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.fact-item{background:var(--main-soft);border-radius:var(--radius-sm);padding:12px 14px}
+.fact-item b{display:block;font-size:18px;color:var(--main);
+  font-variant-numeric:tabular-nums}
+.fact-item span{font-size:12.5px;color:var(--muted)}
+
+/* 精选卡片网格 */
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.feature-card{display:flex;flex-direction:column;overflow:hidden;padding:0}
+.feature-card img{width:100%;height:132px;object-fit:cover}
+.feature-card .fc-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:12px;background:var(--accent-soft);color:var(--accent);letter-spacing:.04em;width:fit-content}
+.tag.main{background:var(--main-soft);color:var(--main)}
+.feature-card h3{font-size:15.5px}
+.feature-card .fc-body p{font-size:13.5px;color:var(--muted);flex:1}
+
+/* 紧凑列表 */
+.tight-list{list-style:none;padding:0;margin:0;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.tight-list li{display:grid;grid-template-columns:74px 1fr auto;gap:12px;align-items:baseline;padding:12px 16px;border-bottom:1px solid var(--line);margin:0}
+.tight-list li:last-child{border-bottom:0}
+.tight-list .date{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tight-list .t{font-size:15px;font-weight:600;color:var(--ink)}
+.tight-list .t small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.tight-list .ch{font-size:12px;color:var(--main);background:var(--main-soft);border-radius:10px;padding:2px 9px;white-space:nowrap}
+
+/* 频道索引：标签 */
+.channel-tags{display:flex;flex-wrap:wrap;gap:9px}
+.channel-tags a{
+  display:inline-flex;align-items:center;gap:6px;padding:8px 15px;background:var(--paper);
+  border:1px solid var(--line);border-radius:22px;font-size:14px;color:var(--ink-2);transition:.2s;
+}
+.channel-tags a:hover{border-color:var(--main);color:var(--main);transform:translateY(-2px);box-shadow:var(--shadow)}
+.channel-tags a i{font-style:normal;font-size:12px;color:var(--muted)}
+
+/* 深度解析：对照面板 + 编号 */
+.dossier{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 22px 8px}
+.dossier h3{font-size:17px;margin-top:18px;margin-bottom:8px;padding-left:10px;border-left:3px solid var(--gold)}
+.dossier h3:first-child{margin-top:0}
+.dossier p,.dossier li{font-size:15px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;margin:10px 0 16px}
+.compare > div{padding:14px 16px}
+.compare .c-head{background:var(--main-soft);font-weight:700;font-size:14px;color:var(--main)}
+.compare .c-head.b{background:var(--accent-soft);color:var(--accent)}
+.compare .c-cell{font-size:14px;background:#fbfaf7;border-top:1px solid var(--line)}
+.compare .c-cell:nth-child(3){border-right:1px solid var(--line)}
+.steps{counter-reset:st;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:st;position:relative;padding-left:40px;margin-bottom:12px;font-size:14.5px}
+.steps li::before{
+  content:counter(st,decimal-leading-zero);position:absolute;left:0;top:1px;
+  width:26px;height:26px;border-radius:50%;background:var(--main);color:#fff;
+  font-size:12px;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums;
+}
+.checklist{list-style:none;padding:0;margin:8px 0 16px}
+.checklist li{position:relative;padding-left:26px;font-size:14.5px}
+.checklist li::before{content:"✓";position:absolute;left:2px;color:var(--main);font-weight:700}
+
+/* 观看指南分栏正文 */
+.guide-cols{columns:2;column-gap:28px}
+.guide-cols p{font-size:15px;break-inside:avoid}
+.guide-cols h3{font-size:16px;margin-bottom:6px;break-after:avoid}
+.pull-quote{border-left:4px solid var(--gold);background:#fbf7ef;padding:14px 18px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:15px;color:var(--ink-2);margin:14px 0}
+.pull-quote cite{display:block;font-size:12.5px;color:var(--muted);font-style:normal;margin-top:6px}
+
+/* FAQ */
+.faq details{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);
+  margin-bottom:10px;padding:0 16px;transition:box-shadow .2s;
+}
+.faq details[open]{box-shadow:var(--shadow)}
+.faq summary{
+  cursor:pointer;font-weight:600;font-size:15px;padding:13px 26px 13px 0;position:relative;list-style:none;color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:19px;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{font-size:14.5px;color:var(--ink-2);padding-bottom:14px;border-top:1px dashed var(--line);padding-top:10px;margin-top:0}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cmt{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:15px 17px;box-shadow:var(--shadow)}
+.cmt p{font-size:14px;margin-bottom:8px;color:var(--ink-2)}
+.cmt .who{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.avatar{width:26px;height:26px;border-radius:50%;background:var(--main-soft);color:var(--main);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.cmt.tone-bad .avatar{background:var(--accent-soft);color:var(--accent)}
+.rating{font-size:12px;color:var(--gold);letter-spacing:1px}
+.cmt-form{margin-top:16px;background:var(--paper);border:1px dashed var(--line);border-radius:var(--radius);padding:16px}
+.cmt-form label{font-size:13.5px;font-weight:600;display:block;margin-bottom:5px}
+.cmt-form textarea{width:100%;min-height:76px;padding:9px 11px;border:1px solid var(--line);border-radius:var(--radius-sm);font-family:inherit;font-size:14px;resize:vertical;background:#fbfaf7}
+.cmt-form textarea:focus{border-color:var(--main);background:#fff}
+.cmt-form .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:9px;flex-wrap:wrap}
+.cmt-form button{background:var(--main);color:#fff;border:0;border-radius:20px;padding:8px 20px;font-size:14px;cursor:pointer}
+.cmt-form button:hover{background:#3d5a63}
+.form-msg{font-size:12.5px;color:var(--main)}
+
+/* 资讯流 */
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.news-item{padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm)}
+.news-item .src{font-size:12px;color:var(--main);letter-spacing:.03em}
+.news-item h3{font-size:15px;margin:4px 0 5px}
+.news-item p{font-size:13.5px;color:var(--muted);margin:0}
+
+/* 相关推荐标签 */
+.reco-tags{display:flex;flex-wrap:wrap;gap:9px}
+.reco-tags a{padding:7px 14px;border:1px solid var(--line);background:var(--paper);border-radius:var(--radius-sm);font-size:13.5px;color:var(--ink-2);transition:.2s}
+.reco-tags a:hover{background:var(--main);color:#fff;border-color:var(--main);transform:translateY(-2px)}
+
+/* 榜单 */
+.rank-list{counter-reset:rk;list-style:none;padding:0;margin:0}
+.rank-list li{
+  counter-increment:rk;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:12px 15px;margin-bottom:9px;
+}
+.rank-list li::before{
+  content:counter(rk);grid-row:span 2;width:26px;height:26px;border-radius:7px;background:var(--main);color:#f4d9a8;
+  font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.rank-list li:nth-child(1)::before{background:var(--gold);color:#fff}
+.rank-list .rt{font-weight:600;font-size:15px}
+.rank-list .rd{grid-column:2;font-size:13px;color:var(--muted)}
+.rank-list .bar{grid-column:2;height:5px;background:var(--main-soft);border-radius:3px;overflow:hidden;margin-top:3px}
+.rank-list .bar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative;border-left:2px solid var(--line);margin-left:8px}
+.timeline li{position:relative;padding:0 0 16px 22px;margin:0}
+.timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--main)}
+.timeline .tl-time{font-size:12.5px;color:var(--accent);font-weight:600;letter-spacing:.02em}
+.timeline .tl-title{font-size:15px;font-weight:600}
+.timeline .tl-desc{font-size:13.5px;color:var(--muted)}
+
+/* 侧栏 */
+.side-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 17px;margin-bottom:18px}
+.side-card h2,.side-card h3{font-size:15.5px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.side-nav{list-style:none;padding:0;margin:0}
+.side-nav a{display:block;padding:6px 9px;font-size:13.5px;border-radius:6px;color:var(--ink-2);transition:background .2s,color .2s}
+.side-nav a:hover,.side-nav a.active{background:var(--main-soft);color:var(--main);font-weight:600}
+.side-list{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-list li{padding:7px 0;border-bottom:1px dashed var(--line);margin:0;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.side-list li:last-child{border-bottom:0}
+.side-list a{color:var(--ink-2)}
+.side-list a:hover{color:var(--accent)}
+.side-list .num{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.quote-card{background:linear-gradient(135deg,#2f4858,#456a66);color:#eef3f1;border:0}
+.quote-card h3{color:#f4d9a8;border-bottom-color:rgba(255,255,255,.2)}
+.quote-card p{font-size:13.5px;color:#dbe5e2;margin:0}
+.quote-card cite{display:block;margin-top:8px;font-style:normal;font-size:12px;color:#a9c0ba}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:20px;bottom:22px;z-index:80;width:44px;height:44px;border-radius:50%;
+  background:var(--main);color:#fff;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(34,48,60,.28);opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:hover{background:var(--accent)}
+
+/* 页脚 */
+.site-foot{background:#22303c;color:#c3cfd6;padding:38px 0 26px;margin-top:26px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px;margin-bottom:26px}
+.site-foot .fbrand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.site-foot .fbrand svg{width:32px;height:32px}
+.site-foot .fbrand b{color:#fff;font-size:17px;letter-spacing:.02em}
+.site-foot p{font-size:13.5px;color:#9fb0ba;margin-bottom:8px}
+.foot-col h3{color:#f4d9a8;font-size:14px;margin-bottom:10px;letter-spacing:.05em}
+.foot-col ul{list-style:none;padding:0;margin:0}
+.foot-col li{margin-bottom:6px}
+.foot-col a{color:#c3cfd6;font-size:13.5px}
+.foot-col a:hover{color:#f4d9a8}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.13);padding-top:16px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:12.5px;color:#8f9fa9}
+
+/* 响应式 */
+@media (max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:26px}
+  .side-col{max-width:100%}
+  .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-inner{grid-template-columns:1fr;gap:26px;padding:44px 0 48px}
+  .hero-art{order:-1;max-width:330px;margin:0 auto}
+  .overview-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .nav-toggle{display:inline-flex}
+  .main-nav{margin-left:0;width:100%;order:5}
+  .nav-list{display:none;flex-direction:column;gap:2px;padding:8px 0 4px;border-top:1px solid var(--line);margin-top:6px}
+  .nav-list.open{display:flex}
+  .nav-list a{padding:10px 12px;font-size:15px}
+  .head-extra{margin-left:auto}
+  .comments{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare .c-cell:nth-child(3){border-right:0}
+  .guide-cols{columns:1}
+}
+@media (max-width:640px){
+  :root{--sticky-offset:88px}
+  .wrap{padding:0 15px}
+  .feature-grid{grid-template-columns:1fr}
+  .fact-strip{grid-template-columns:1fr 1fr}
+  .tight-list li{grid-template-columns:1fr auto;gap:4px 10px}
+  .tight-list .date{grid-column:1;order:2;font-size:12px}
+  .tight-list .t{grid-column:1;order:1}
+  .tight-list .ch{grid-column:2;grid-row:1/span 2;align-self:center}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-stats{gap:18px}
+  .hero-stats .st b{font-size:19px}
+  .search-box input{width:120px}
+  .brand-name{font-size:17px}
+  .to-top{right:14px;bottom:16px;width:40px;height:40px}
+  .dossier{padding:18px 15px 6px}
+  .announce{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .hover-raise:hover,.nav-list a:hover,.btn:hover,.channel-tags a:hover,.reco-tags a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<div class="sticky-stack">
+  <div class="announce" role="region" aria-label="更新公告">
+    <div class="wrap">
+      <span><span class="dot"></span><b>禁止的爱善良</b>专题更新 · 2026-11-06 补入第 18 集角色动机对照表</span>
+      <span>11-05 新增「林善雅宽恕线」观众评论 27 条</span>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="/#top" aria-label="返回首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#2f4858"/>
+          <path d="M19 45V21h6l7 13 7-13h6v24h-5.4V31.5L32 44.2l-7.6-12.7V45z" fill="#f4d9a8"/>
+          <circle cx="49" cy="19" r="5" fill="#a8574a"/>
+        </svg>
+        <span>
+          <span class="brand-name">禁止的爱善良</span>
+          <span class="brand-sub">伦理剧 · 角色档案</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" type="button">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        频道
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <ul class="nav-list" id="navList">
+          <li><a href="/#overview">剧情概览</a></li>
+          <li><a href="/#featured">精选片段</a></li>
+          <li><a href="/#updates">更新动态</a></li>
+          <li><a href="/#channels">频道索引</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">观看指南</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+        </ul>
+      </nav>
+      <div class="head-extra">
+        <div class="search-box">
+          <label class="sr-only" for="siteSearch">站内查找角色或分集</label>
+          <input type="search" id="siteSearch" placeholder="搜角色 / 分集" autocomplete="off">
+          <span class="sicon" aria-hidden="true">⌕</span>
+          <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hero-tag">家庭伦理 · 双女主叙事 · 2026 秋季档</span>
+        <h1 id="heroTitle">禁止的爱善良<span class="hl">。</span></h1>
+        <p class="hero-lead">一部把「善意是否等于正确」推到台面上的都市伦理剧。妹妹<strong>林善雅</strong>为护住姐姐婚姻，替她隐瞒一场车祸；姐姐<strong>姜露</strong>在知情后选择沉默。两个人都在做「为对方好」的事，代价却落在第三个人身上。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#analysis">读深度解析</a>
+          <a class="btn btn-ghost" href="/#guide">按集数看指南</a>
+        </div>
+        <div class="hero-stats">
+          <div class="st"><b>24</b><span>已播集数 / 共 32 集</span></div>
+          <div class="st"><b>6</b><span>核心角色档案</span></div>
+          <div class="st"><b>11-06</b><span>角色关系图更新</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 360" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f4d9a8" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#a8574a" stop-opacity=".8"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffffff" stop-opacity=".22"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <circle cx="200" cy="176" r="140" fill="url(#g2)"/>
+          <circle cx="200" cy="176" r="104" fill="none" stroke="#f4d9a8" stroke-opacity=".5" stroke-width="1.5"/>
+          <circle cx="200" cy="176" r="76" fill="none" stroke="#f4d9a8" stroke-opacity=".35" stroke-width="1"/>
+          <path d="M146 232c0-52 24-90 54-90s54 38 54 90" fill="url(#g1)"/>
+          <circle cx="200" cy="118" r="30" fill="#f4d9a8"/>
+          <path d="M200 148v96" stroke="#2f4858" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>
+          <path d="M164 200h72" stroke="#2f4858" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>
+          <g fill="#fff" opacity=".82">
+            <circle cx="96" cy="92" r="4"/><circle cx="318" cy="126" r="3"/>
+            <circle cx="74" cy="238" r="3"/><circle cx="330" cy="266" r="4"/>
+            <circle cx="286" cy="70" r="2.5"/><circle cx="120" cy="300" r="2.5"/>
+          </g>
+          <path d="M96 160c18 6 30 20 34 40" stroke="#f4d9a8" stroke-width="1.6" fill="none" stroke-dasharray="5 6" opacity=".7"/>
+          <path d="M306 214c-16 8-26 22-28 42" stroke="#f4d9a8" stroke-width="1.6" fill="none" stroke-dasharray="5 6" opacity=".7"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div class="main-col">
+
+      <section class="block" id="overview" aria-labelledby="overviewH">
+        <div class="block-head">
+          <h2 id="overviewH">剧情概览：一场车祸牵出的两难</h2>
+          <span class="block-kicker">Story Overview</span>
+        </div>
+        <div class="overview-grid">
+          <div class="overview-main">
+            <p>故事从 2026 年 9 月的一个雨夜开始。姜露驾车在城南快速路撞倒骑电动车的钢琴教师<b>陈知远</b>，同车的妹妹林善雅提出由自己顶替驾驶座。交警调取的监控在 9 月 14 日凌晨两点十七分出现 8 分钟空白，成为全剧最关键的证据缺口。</p>
+            <p>此后 24 集围绕三个问题推进：顶替能否瞒过交警与保险公司；陈知远家属的赔偿诉求如何落地；姜露与林善雅的关系在知情者增多后如何变形。剧集没有把谁写成纯粹的恶人，镜头更在意每次沉默之后家里餐桌上的气氛。</p>
+          </div>
+          <div class="fact-strip" aria-label="基础数据">
+            <div class="fact-item"><b>32 集</b><span>总集数，每集约 45 分钟</span></div>
+            <div class="fact-item"><b>9/14</b><span>事故当夜，监控空白起点</span></div>
+            <div class="fact-item"><b>3 人</b><span>知情者：姐妹与修车厂老周</span></div>
+            <div class="fact-item"><b>18 集</b><span>顶替行为首次被戳破</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="featured" aria-labelledby="featuredH">
+        <div class="block-head">
+          <h2 id="featuredH">精选片段：值得回看的四场戏</h2>
+          <span class="block-kicker">Selected Scenes</span>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature-card hover-raise">
+            <img src="https://picsum.photos/seed/shanya-rain/640/360" width="640" height="360" loading="lazy" alt="雨夜路灯下的路口，雨刮器摆动中的挡风玻璃">
+            <div class="fc-body">
+              <span class="tag">第 1 集</span>
+              <h3>雨夜路口 8 分钟</h3>
+              <p>镜头在行车记录仪与后视镜之间切换，观众比交警更早知道谁在开车。</p>
+            </div>
+          </article>
+          <article class="card feature-card hover-raise">
+            <img src="https://picsum.photos/seed/kitchen-quiet/640/360" width="640" height="360" loading="lazy" alt="白色厨房台面上两只未动的饭碗与汤勺">
+            <div class="fc-body">
+              <span class="tag main">第 9 集</span>
+              <h3>厨房里的两碗冷饭</h3>
+              <p>姜露第一次说出「我知道」，姐妹俩谁也没动筷子。整场戏无配乐。</p>
+            </div>
+          </article>
+          <article class="card feature-card hover-raise">
+            <img src="https://picsum.photos/seed/repair-shop/640/360" width="640" height="360" loading="lazy" alt="修车厂内举升机上的银色轿车与工具架">
+            <div class="fc-body">
+              <span class="tag">第 14 集</span>
+              <h3>修车厂行车记录仪</h3>
+              <p>老周把拆下的记录仪存储卡放进烟盒，这个动作后来成了检方证物链的一环。</p>
+            </div>
+          </article>
+          <article class="card feature-card hover-raise">
+            <img src="https://picsum.photos/seed/hospital-hall/640/360" width="640" height="360" loading="lazy" alt="医院走廊长椅与尽头的自动售货机灯光">
+            <div class="fc-body">
+              <span class="tag main">第 21 集</span>
+              <h3>医院走廊的赔偿协议</h3>
+              <p>陈知远母亲把协议推回去，说了句「钱治不好手」，直接改变了谈判走向。</p>
+            </div>
+          </article>
+          <article class="card feature-card hover-raise">
+            <img src="https://picsum.photos/seed/music-room/640/360" width="640" height="360" loading="lazy" alt="空置琴房里的立式钢琴与翻开的乐谱">
+            <div class="fc-body">
+              <span class="tag">第 24 集</span>
+              <h3>空琴房与一首没弹完的曲子</h3>
+              <p>手部神经损伤后，陈知远在琴房只按下一个音。这场戏没有台词。</p>
+            </div>
+          </article>
+          <article class="card feature-card hover-raise">
+            <img src="https://picsum.photos/seed/courtroom-door/640/360" width="640" height="360" loading="lazy" alt="法院入口台阶与深色木门">
+            <div class="fc-body">
+              <span class="tag main">第 18 集</span>
+              <h3>庭审前十分钟的走廊</h3>
+              <p>林善雅准备自首，姜露在走廊拦住她。律师的一句「伪证另案处理」改变了选择。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="updates" aria-labelledby="updatesH">
+        <div class="block-head">
+          <h2 id="updatesH">更新动态：本周新增与修订</h2>
+          <span class="block-kicker">Updates</span>
+        </div>
+        <ul class="tight-list">
+          <li>
+            <span class="date">11-06</span>
+            <span class="t">补入第 18 集角色动机对照表<small>整理姜露、林善雅、老周三人在庭审前的选择与理由。</small></span>
+            <span class="ch">角色档案</span>
+          </li>
+          <li>
+            <span class="date">11-05</span>
+            <span class="t">新增「林善雅宽恕线」观众评论 27 条<small>含 9 条明确反对「善良即正义」的批评意见。</small></span>
+            <span class="ch">观众评论</span>
+          </li>
+          <li>
+            <span class="date">11-03</span>
+            <span class="t">第 24 集空琴房片段加入分镜说明<small>补充导演访谈中关于「无台词三分钟」的表述。</small></span>
+            <span class="ch">精选片段</span>
+          </li>
+          <li>
+            <span class="date">10-31</span>
+            <span class="t">更新第 14 集修车厂证物链时间线<small>按剧中展示顺序重排，标出烟盒出场镜头。</small></span>
+            <span class="ch">深度解析</span>
+          </li>
+          <li>
+            <span class="date">10-28</span>
+            <span class="t">新增「陈知远赔偿诉求」问答两条<small>区分剧中协议约定与现实法律判决差异。</small></span>
+            <span class="ch">常见问答</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block" id="channels" aria-labelledby="channelsH">
+        <div class="block-head">
+          <h2 id="channelsH">频道索引：按主题找内容</h2>
+          <span class="block-kicker">Channels</span>
+        </div>
+        <div class="channel-tags">
+          <a href="/#analysis">角色动机解析 <i>6 篇</i></a>
+          <a href="/#featured">重点片段回看 <i>12 场</i></a>
+          <a href="/#guide">分集观看指南 <i>24 集</i></a>
+          <a href="/#overview">剧情概览 <i>1 篇</i></a>
+          <a href="/#updates">每周更新动态 <i>5 条</i></a>
+          <a href="/#analysis">顶替行为合法性 <i>3 篇</i></a>
+          <a href="/#comments">观众评分与吐槽 <i>87 条</i></a>
+          <a href="/#reco">相似剧集推荐 <i>8 部</i></a>
+          <a href="/#faq">常见问答 <i>10 条</i></a>
+          <a href="/#timeline">事件时间线 <i>1 图</i></a>
+          <a href="/#rank">角色好感度榜 <i>6 人</i></a>
+          <a href="/#news">相关资讯 <i>6 条</i></a>
+        </div>
+      </section>
+
+      <section class="block" id="analysis" aria-labelledby="analysisH">
+        <div class="block-head">
+          <h2 id="analysisH">深度解析：善良如何变成第二次伤害</h2>
+          <span class="block-kicker">Deep Analysis</span>
+        </div>
+        <div class="dossier">
+          <h3>一、顶替不是「帮姐姐」，而是把一个决定变成两个错误</h3>
+          <p>第 1 集里林善雅坐上驾驶座的动作只有 11 秒，第 18 集庭审前走廊那场戏却用了 4 分钟去解释这 11 秒。她的理由很简单：姜露的女儿在读小学二年级，母亲刚做完心脏支架。换人顶替，能少毁一个家庭。问题是，这个决定把陈知远的赔偿请求从「保险理赔」推到「刑事附带民事」，周期从约 3 个月拉长到 11 个月——第 21 集里陈母在走廊说的话，正对应这个时间差。</p>
+          <div class="compare" role="table" aria-label="两种处理方式对照">
+            <div class="c-head" role="columnheader">立刻报警</div>
+            <div class="c-head b" role="columnheader">顶替驾驶</div>
+            <div class="c-cell" role="cell">交警认定书约 10 个工作日出具，保险按交强险先行垫付。</div>
+            <div class="c-cell" role="cell">监控空白引发复核，认定书延后至第 39 天。</div>
+            <div class="c-cell" role="cell">姜露面临危险驾驶或交通肇事责任，量刑有明确区间。</div>
+            <div class="c-cell" role="cell">第 18 集起叠加伪证与包庇争议，姐妹二人同时被调查。</div>
+            <div class="c-cell" role="cell">陈知远可及早启动伤残鉴定与康复安排。</div>
+            <div class="c-cell" role="cell">赔偿谈判拖到第 21 集，康复黄金期已过。</div>
+          </div>
+          <p>这组对照的判断可以直接被反驳：若按第 14 集老周的证词，监控空白本就存在，顶替与否都会触发复核。支持这一反驳的细节是存储卡被拔出的时间戳——剧中特写显示为 9 月 14 日 02:25，早于林善雅坐上驾驶座的 02:31。</p>
+
+          <h3>二、「为对方好」的叙事在第 9 集出现第一次裂口</h3>
+          <p>第 9 集厨房那场戏，姜露说出「我知道」之后，画面切到两碗没动的米饭，之后 6 分钟没有一句完整对白。这不是导演炫技，是关键信息：姐妹之间的「善意」已经不再能靠沉默维持。此后的 15 集，两人共处一室的镜头只有 7 次，比前 8 集的 19 次减少近三分之二。</p>
+          <ul class="checklist">
+            <li>可核对项一：知情者从 2 人增至 3 人的时点，在第 14 集老周出场后。</li>
+            <li>可核对项二：姜露主动说出事实的次数，全剧 24 集中为 0 次。</li>
+            <li>可核对项三：林善雅提出自首的次数为 3 次，分别在第 12、18、23 集。</li>
+          </ul>
+
+          <h3>三、争论的焦点正在转移：从「谁开的车」到「谁该先说」</h3>
+          <p>观众讨论在第 18 集后明显分叉。一派认为林善雅的顶替是伪证，应另案处理；另一派认为她只是包庇，量刑显著更轻。剧组在 11 月 2 日的直播里回应：「剧中律师的台词参照了包庇罪与伪证罪的构成要件差异，但为剧情压缩了程序。」这是转述，不是判决依据。剧中原话出现在第 18 集 31 分 04 秒，律师说「你现在去说是自首，不是坦白」，措辞未直接点名罪名。</p>
+          <p>推测部分需要单独标出：如果第 25 集后陈知远家属坚持不谅解，赔偿协议可能无法达成，姜露的量刑区间会向上限靠近。这一判断依赖两个未在剧中确认的前提——谅解书的具体作用与检方是否并案。</p>
+
+          <h3>四、把「善良」拆成可核对的三个维度</h3>
+          <ol class="steps">
+            <li><b>动机</b>：林善雅的行为动机在第 2 集有明确台词，是保护姐姐的女儿，不是保护姐姐。</li>
+            <li><b>信息</b>：她在第 1 集并不知道姜露当晚饮过酒，知情时间在第 5 集，这改变了后续责任判断。</li>
+            <li><b>代价承担</b>：她本人的职业、婚约在第 11 集与第 20 集先后受影响，代价并非零。</li>
+          </ol>
+          <p>三个维度里最容易混淆的是动机与信息。动机善良但信息不完整，仍会导向错误决定；这一点比「她是不是好人」更值得讨论。</p>
+        </div>
+      </section>
+
+      <section class="block" id="guide" aria-labelledby="guideH">
+        <div class="block-head">
+          <h2 id="guideH">体验指南：怎么看不至于漏掉线索</h2>
+          <span class="block-kicker">Viewing Guide</span>
+        </div>
+        <div class="guide-cols">
+          <h3>按播出顺序看，别跳集</h3>
+          <p>全剧 32 集，前 8 集每集埋一个具体物件：雨刮器、行车记录仪、烟盒、赔偿协议草稿、琴房钥匙、保险单、交警认定书编号、病历。这些物件在第 14、18、21 集分别回收一次。</p>
+          <h3>记录三个时间点</h3>
+          <p>9 月 14 日 02:17（监控空白起点）、02:25（存储卡被拔出）、02:31（林善雅坐上驾驶座）。三个时间点在第 14 集修车厂戏里被完整呈现，顺序错了会误判谁先动手。</p>
+          <h3>两处容易被忽略的台词</h3>
+          <p>第 9 集姜露说「我知道」时语气是陈述，没有疑问。第 18 集律师说「不是坦白」，这两个字决定了后续程序走向，值得回看字幕。</p>
+          <div class="pull-quote">
+            「顶替这个动作本身不复杂，复杂的是每个人在心里替它找的理由。」
+            <cite>—— 第 18 集 31 分 04 秒附近的律师台词</cite>
+          </div>
+          <h3>适合与不适合的观看方式</h3>
+          <p>适合两集连看，因为单集结尾常以静场收束，情绪需要延续。不适合倍速，第 24 集空琴房三分钟没有台词，倍速会直接跳过。</p>
+          <h3>家庭观看提示</h3>
+          <p>第 21 集医院走廊与第 24 集琴房涉及伤残与康复内容，未成年观众建议陪同。</p>
+        </div>
+      </section>
+
+      <section class="block" id="faq" aria-labelledby="faqH">
+        <div class="block-head">
+          <h2 id="faqH">常见问答：关于剧情与设定的具体疑问</h2>
+          <span class="block-kicker">FAQ</span>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>林善雅顶替驾驶的行为，在剧中对应什么责任？</summary>
+            <div class="ans">剧中律师的表述更接近包庇方向，但台词未直接点名罪名。第 18 集 31 分 04 秒的原话是「你现在去说是自首，不是坦白」，措辞留了余地。姜露的行为则落在交通事故本身的责任认定上，二者不同。</div>
+          </details>
+          <details>
+            <summary>陈知远的赔偿诉求为什么到第 21 集还没谈成？</summary>
+            <div class="ans">症结在伤残鉴定未完成。第 11 集已出具初步诊断为桡神经损伤，但完整鉴定要等康复观察期。陈母在第 21 集推回协议时说的是「钱治不好手」，指向的正是鉴定结果的不确定。</div>
+          </details>
+          <details>
+            <summary>修车厂老周为什么愿意把存储卡交出来？</summary>
+            <div class="ans">第 14 集给了两个理由：一是他女儿在同一路段被撞过，二是姜露的保险公司理赔员催得太急。前者是台词明说，后者靠画面里被反复揉皱的理赔单暗示。</div>
+          </details>
+          <details>
+            <summary>剧中监控空白 8 分钟是人为还是巧合？</summary>
+            <div class="ans">第 14 集特写显示存储卡拔出时间 02:25，早于顶替动作 02:31，说明空白不是林善雅造成。至于是否另有他人，剧中到第 24 集未明确交代，属悬置线索。</div>
+          </details>
+          <details>
+            <summary>姜露女儿在剧中的作用是什么？</summary>
+            <div class="ans">她是林善雅顶替动机的直接来源，第 2 集有明确台词。第 19 集她在学校被同学议论，成为姜露情绪转折的触发点，也是全剧家庭压力最直观的落点。</div>
+          </details>
+          <details>
+            <summary>第 24 集空琴房那场戏真的没有台词吗？</summary>
+            <div class="ans">有环境音，没有人物对白。导演在 11 月 2 日直播中提到这场戏拍了 7 条，选的版本是陈知远只按下一个音的那条。</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="block" id="comments" aria-labelledby="commentsH">
+        <div class="block-head">
+          <h2 id="commentsH">观众评论：口碑分叉的地方</h2>
+          <span class="block-kicker">Audience Voices</span>
+        </div>
+        <div class="comments">
+          <article class="cmt">
+            <p>第 9 集厨房两碗冷饭那场戏，我反复看了三遍。没有配乐，只有勺子碰碗的声音，比任何哭戏都难受。</p>
+            <div class="who"><span class="avatar">周</span>周禾 · 11-05 · <span class="rating">★★★★★</span></div>
+          </article>
+          <article class="cmt tone-bad">
+            <p>第 18 集庭审走廊的安排太拖了。律师那句「不是坦白」说得含糊，观众得自己查罪名构成，编剧偷懒。</p>
+            <div class="who"><span class="avatar">陈</span>陈砚 · 11-04 · <span class="rating">★★★</span></div>
+          </article>
+          <article class="cmt">
+            <p>林善雅这个角色写得比姜露细。她在第 11 集丢了工作，第 20 集婚约也吹了，代价是实打实的，不是嘴上说善良。</p>
+            <div class="who"><span class="avatar">陆</span>陆晚 · 11-03 · <span class="rating">★★★★</span></div>
+          </article>
+          <article class="cmt tone-bad">
+            <p>存储卡那条线埋得有点乱。02:25 的时间戳只在第 14 集出现一次，不留意就以为空白是林善雅弄的，这样处理容易误导。</p>
+            <div class="who"><span class="avatar">何</span>何一舟 · 11-02 · <span class="rating">★★★</span></div>
+          </article>
+          <article class="cmt">
+            <p>我不觉得林善雅是好人，但也说不上坏。她的问题在于替别人做决定，而不是做了什么恶事。第 12 集她想自首那次，姜露拦得特别自然。</p>
+            <div class="who"><span class="avatar">苏</span>苏白 · 11-01 · <span class="rating">★★★★</span></div>
+          </article>
+          <article class="cmt">
+            <p>陈母第 21 集推回协议那下真准。全剧最有力的一幕不是法庭，是医院走廊。演员手抖的细节很稳。</p>
+            <div class="who"><span class="avatar">林</span>林照 · 10-30 · <span class="rating">★★★★★</span></div>
+          </article>
+        </div>
+        <form class="cmt-form" id="cmtForm" aria-label="提交观后感">
+          <label for="cmtText">写下你的观后感</label>
+          <textarea id="cmtText" placeholder="说说哪一集、哪场戏改变了你的判断……" maxlength="200"></textarea>
+          <div class="row">
+            <span class="form-msg" id="cmtMsg" role="status" aria-live="polite"></span>
+            <button type="submit">提交</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="block" id="news" aria-labelledby="newsH">
+        <div class="block-head">
+          <h2 id="newsH">相关资讯：剧外动态与访谈</h2>
+          <span class="block-kicker">Related News</span>
+        </div>
+        <div class="news-grid">
+          <article class="news-item">
+            <span class="src">剧组直播 · 11-02</span>
+            <h3>导演谈第 24 集无台词处理</h3>
+            <p>提到空琴房拍了 7 条，最终选用只弹一个音的版本，理由是该音对应陈知远原本的练习曲目。</p>
+          </article>
+          <article class="news-item">
+            <span class="src">平台数据 · 11-01</span>
+            <h3>第 18 集单集完播率 78%</h3>
+            <p>该集为全剧目前完播率最高的一集，弹幕量集中在庭审前走廊 4 分钟段落。</p>
+          </article>
+          <article class="news-item">
+            <span class="src">编剧访谈 · 10-29</span>
+            <h3>顶替设定来自两起真实案件</h3>
+            <p>访谈称参考了 2023 年与 2024 年各一起交通案件报道，但未点名具体案号。</p>
+          </article>
+          <article class="news-item">
+            <span class="src">角色讨论 · 10-27</span>
+            <h3>林善雅是否应被原谅引发讨论</h3>
+            <p>某剧评账号发起的投票中，42% 选择「不该原谅」，理由多为她替别人做了决定。</p>
+          </article>
+          <article class="news-item">
+            <span class="src">制作信息 · 10-24</span>
+            <h3>配乐专辑追加发布 6 首</h3>
+            <p>新增曲目含第 9 集厨房戏的环境音剪版，未收录对白。</p>
+          </article>
+          <article class="news-item">
+            <span class="src">播出调整 · 10-22</span>
+            <h3>第 25 集播出时间调整</h3>
+            <p>平台公告称因排播调整，第 25 集延后一天上线，剧集总集数不变。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="rank" aria-labelledby="rankH">
+        <div class="block-head">
+          <h2 id="rankH">角色好感度榜：按剧中行为投票</h2>
+          <span class="block-kicker">Character Ranking</span>
+        </div>
+        <ol class="rank-list">
+          <li>
+            <span class="rt">陈知远母亲</span>
+            <span class="rd">第 21 集推回协议的一幕，支持率上升 12%。</span>
+            <span class="bar"><i style="width:88%"></i></span>
+          </li>
+          <li>
+            <span class="rt">修车厂老周</span>
+            <span class="rd">第 14 集交出存储卡，被评「全剧最像成年人的选择」。</span>
+            <span class="bar"><i style="width:81%"></i></span>
+          </li>
+          <li>
+            <span class="rt">林善雅</span>
+            <span class="rd">动机同情分高，代价承担也实，但替人决定扣分。</span>
+            <span class="bar"><i style="width:64%"></i></span>
+          </li>
+          <li>
+            <span class="rt">姜露</span>
+            <span class="rd">沉默 24 集，主动说出事实 0 次。</span>
+            <span class="bar"><i style="width:47%"></i></span>
+          </li>
+          <li>
+            <span class="rt">保险公司理赔员</span>
+            <span class="rd">流程正确但态度急躁，观众评价两极。</span>
+            <span class="bar"><i style="width:36%"></i></span>
+          </li>
+          <li>
+            <span class="rt">陈知远</span>
+            <span class="rd">受害者身份明确，戏份集中在第 24 集。</span>
+            <span class="bar"><i style="width:29%"></i></span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="block" id="timeline" aria-labelledby="timelineH">
+        <div class="block-head">
+          <h2 id="timelineH">事件时间线：事故后的 39 天</h2>
+          <span class="block-kicker">Timeline</span>
+        </div>
+        <ul class="timeline">
+          <li>
+            <span class="tl-time">9 月 14 日 02:17</span>
+            <div class="tl-title">监控出现空白</div>
+            <div class="tl-desc">城南快速路东段摄像头画面中断，持续 8 分钟。</div>
+          </li>
+          <li>
+            <span class="tl-time">9 月 14 日 02:25</span>
+            <div class="tl-title">存储卡被拔出</div>
+            <div class="tl-desc">第 14 集特写揭示，早于林善雅坐上驾驶座 6 分钟。</div>
+          </li>
+          <li>
+            <span class="tl-time">9 月 14 日 02:31</span>
+            <div class="tl-title">顶替动作完成</div>
+            <div class="tl-desc">姐妹二人交换位置，行车记录仪当时处于关闭状态。</div>
+          </li>
+          <li>
+            <span class="tl-time">9 月 24 日</span>
+            <div class="tl-title">认定书延期</div>
+            <div class="tl-desc">交警复核监控空白，原定 10 个工作日出具的认定书延后。</div>
+          </li>
+          <li>
+            <span class="tl-time">10 月 22 日</span>
+            <div class="tl-title">第 18 集庭审前走廊</div>
+            <div class="tl-desc">林善雅准备自首，律师介入，选择改变。</div>
+          </li>
+          <li>
+            <span class="tl-time">10 月 29 日</span>
+            <div class="tl-title">赔偿协议首次谈崩</div>
+            <div class="tl-desc">陈母推回协议，理由指向伤残鉴定未完成。</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block" id="reco" aria-labelledby="recoH">
+        <div class="block-head">
+          <h2 id="recoH">相关推荐：顺着这些词继续找</h2>
+          <span class="block-kicker">Recommendations</span>
+        </div>
+        <div class="reco-tags">
+          <a href="/#analysis">交通肇事顶替判几年</a>
+          <a href="/#analysis">包庇罪与伪证罪区别</a>
+          <a href="/#guide">分集观看时间线整理</a>
+          <a href="/#featured">雨夜车祸片段回看</a>
+          <a href="/#comments">林善雅角色评价</a>
+          <a href="/#faq">陈知远赔偿鉴定</a>
+          <a href="/#timeline">事故后 39 天</a>
+          <a href="/#rank">伦理剧角色好感度</a>
+          <a href="/#news">剧组导演访谈</a>
+          <a href="/#overview">都市伦理剧推荐</a>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="side-col" aria-label="侧栏导航与补充信息">
+      <nav class="side-card" aria-labelledby="sideNavH">
+        <h2 id="sideNavH">本页栏目</h2>
+        <ul class="side-nav" id="sideNavList">
+          <li><a href="/#overview">剧情概览</a></li>
+          <li><a href="/#featured">精选片段</a></li>
+          <li><a href="/#updates">更新动态</a></li>
+          <li><a href="/#channels">频道索引</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rank">角色好感榜</a></li>
+          <li><a href="/#timeline">事件时间线</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </nav>
+
+      <div class="side-card">
+        <h3>近期热议条目</h3>
+        <ul class="side-list">
+          <li><a href="/#analysis">02:25 存储卡时间戳</a><span class="num">11-06</span></li>
+          <li><a href="/#faq">顶替行为的罪名争议</a><span class="num">11-05</span></li>
+          <li><a href="/#featured">第 24 集空琴房</a><span class="num">11-03</span></li>
+          <li><a href="/#comments">陈母推回协议</a><span class="num">10-30</span></li>
+          <li><a href="/#rank">林善雅是否该被原谅</a><span class="num">10-27</span></li>
+        </ul>
+      </div>
+
+      <div class="side-card quote-card">
+        <h3>剧中台词</h3>
+        <p>「钱治不好手。」</p>
+        <cite>—— 第 21 集 医院走廊，陈知远母亲</cite>
+      </div>
+
+      <div class="side-card">
+        <h3>观看前必读</h3>
+        <p style="font-size:13.5px;color:var(--ink-2);margin:0">前 8 集节奏慢，物件线索多；第 14 集是信息汇聚点，建议在此回看前三集的关键监控画面。</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="fbrand">
+          <svg viewBox="0 0 64 64" role="img" aria-hidden="true" focusable="false">
+            <rect width="64" height="64" rx="14" fill="#f4d9a8"/>
+            <path d="M19 45V21h6l7 13 7-13h6v24h-5.4V31.5L32 44.2l-7.6-12.7V45z" fill="#2f4858"/>
+            <circle cx="49" cy="19" r="5" fill="#a8574a"/>
+          </svg>
+          <b>禁止的爱善良</b>
+        </div>
+        <p>追踪一部伦理剧如何在善意与越界之间做取舍，把角色选择拆成可核对的时间、物件与台词。</p>
+      </div>
+      <div class="foot-col">
+        <h3>内容栏目</h3>
+        <ul>
+          <li><a href="/#overview">剧情概览</a></li>
+          <li><a href="/#featured">精选片段</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">观看指南</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>互动与资料</h3>
+        <ul>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#rank">角色好感榜</a></li>
+          <li><a href="/#timeline">事件时间线</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>延伸浏览</h3>
+        <ul>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+          <li><a href="/#channels">频道索引</a></li>
+          <li><a href="/#updates">更新动态</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>示例数据说明：角色、分集、评论均为示例内容，用于展示页面结构，不代表真实剧集信息。</span>
+      <span>更新时间：2026-11-06 · 页面内容以正文可核对条目为准</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 14V4M4 9l5-5 5 5" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"禁止的爱善良",
+  "description":"围绕家庭伦理剧《禁止的爱善良》的角色关系、分集线索、深度解析与观众争论的专题首页。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"林善雅顶替驾驶的行为，在剧中对应什么责任？",
+      "acceptedAnswer":{"@type":"Answer","text":"剧中律师的表述更接近包庇方向，但台词未直接点名罪名。第 18 集 31 分 04 秒的原话是「你现在去说是自首，不是坦白」，措辞留了余地。"}
+    },
+    {
+      "@type":"Question",
+      "name":"陈知远的赔偿诉求为什么到第 21 集还没谈成？",
+      "acceptedAnswer":{"@type":"Answer","text":"症结在伤残鉴定未完成。第 11 集已出具初步诊断为桡神经损伤，但完整鉴定要等康复观察期。陈母在第 21 集推回协议时说的是「钱治不好手」。"}
+    },
+    {
+      "@type":"Question",
+      "name":"修车厂老周为什么愿意把存储卡交出来？",
+      "acceptedAnswer":{"@type":"Answer","text":"第 14 集给了两个理由：一是他女儿在同一路段被撞过，二是姜露的保险公司理赔员催得太急。前者是台词明说，后者靠画面暗示。"}
+    },
+    {
+      "@type":"Question",
+      "name":"剧中监控空白 8 分钟是人为还是巧合？",
+      "acceptedAnswer":{"@type":"Answer","text":"第 14 集特写显示存储卡拔出时间 02:25，早于顶替动作 02:31，说明空白不是林善雅造成。剧中到第 24 集未明确交代是否另有他人。"}
+    },
+    {
+      "@type":"Question",
+      "name":"第 24 集空琴房那场戏真的没有台词吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"有环境音，没有人物对白。导演在 11 月 2 日直播中提到这场戏拍了 7 条，选的版本是陈知远只按下一个音的那条。"}
+    }
+  ]
+}
+</script>
+<script>
+(function(){
+  var navToggle = document.getElementById('navToggle');
+  var navList = document.getElementById('navList');
+  if(navToggle && navList){
+    navToggle.addEventListener('click', function(){
+      var open = navList.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navList.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 820){
+        navList.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY > 480){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNavList a'));
+  var targets = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos = window.scrollY + 140;
+    var active = -1;
+    for(var i=0;i<targets.length;i++){
+      var el = targets[i];
+      if(el && el.offsetTop <= pos){ active = i; }
+    }
+    sideLinks.forEach(function(a,i){
+      a.classList.toggle('active', i === active);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+
+  var searchInput = document.getElementById('siteSearch');
+  var feedback = document.getElementById('searchFeedback');
+  var searchData = [
+    {t:'剧情概览：一场车祸牵出的两难', id:'overview'},
+    {t:'精选片段：第 24 集空琴房', id:'featured'},
+    {t:'更新动态：11-06 角色动机对照表', id:'updates'},
+    {t:'频道索引：角色动机解析', id:'channels'},
+    {t:'深度解析：善良如何变成第二次伤害', id:'analysis'},
+    {t:'体验指南：分集观看时间线', id:'guide'},
+    {t:'常见问答：顶替行为的罪名争议', id:'faq'},
+    {t:'观众评论：林善雅角色评价', id:'comments'},
+    {t:'相关资讯：导演访谈', id:'news'},
+    {t:'角色好感度榜：陈知远母亲', id:'rank'},
+    {t:'事件时间线：02:25 存储卡', id:'timeline'},
+    {t:'相关推荐：交通肇事顶替判几年', id:'reco'}
+  ];
+  var timer = null;
+  function doSearch(){
+    var q = (searchInput.value || '').trim().toLowerCase();
+    if(!q){ feedback.classList.remove('show'); return; }
+    var hit = searchData.filter(function(item){
+      return item.t.toLowerCase().indexOf(q) > -1;
+    });
+    if(hit.length){
+      feedback.innerHTML = '找到：<a href="/#'+hit[0].id+'">'+hit[0].t+'</a>' + (hit.length>1 ? ' 等 '+hit.length+' 条' : '');
+    }else{
+      feedback.textContent = '没有找到「'+searchInput.value+'」，试试「顶替」「琴房」「时间线」';
+    }
+    feedback.classList.add('show');
+  }
+  searchInput.addEventListener('input', function(){
+    clearTimeout(timer);
+    timer = setTimeout(doSearch, 220);
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.search-box')){ feedback.classList.remove('show'); }
+  });
+  feedback.addEventListener('click', function(){
+    feedback.classList.remove('show');
+  });
+
+  var cmtForm = document.getElementById('cmtForm');
+  var cmtText = document.getElementById('cmtText');
+  var cmtMsg = document.getElementById('cmtMsg');
+  cmtForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = (cmtText.value || '').trim();
+    if(v.length < 5){
+      cmtMsg.textContent = '再多写几个字，方便其他观众参考。';
+      cmtMsg.style.color = '#a8574a';
+      return;
+    }
+    cmtText.value = '';
+    cmtMsg.textContent = '已记录，展示前会做内容检查。';
+    cmtMsg.style.color = '#2f4858';
+  });
+})();
+</script>
+</body>
+  </html>
