@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>兔崽baby户外喷水-场景清单与实测记录</title>
+<meta name="description" content="兔崽baby户外喷水内容整理：收录户外喷水场景清单、水压档位实测、装备选择与拍摄机位记录，附常见问题与观看体验反馈，按日期归档更新。">
+<meta name="keywords" content="兔崽baby户外喷水">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23135e6b'/%3E%3Cpath d='M32 10c8 12 14 18 14 26a14 14 0 1 1-28 0c0-8 6-14 14-26z' fill='%237fd9e6'/%3E%3C/svg%3E">
+<style>
+:root{
+  --brand:#135e6b;
+  --brand-deep:#0c3f49;
+  --accent:#e8724a;
+  --accent-soft:#fbe6de;
+  --water:#7fd9e6;
+  --water-soft:#e2f6f9;
+  --ink:#1b2a2d;
+  --ink-2:#41575c;
+  --ink-3:#6c8288;
+  --line:#d7e3e6;
+  --bg:#f5f9fa;
+  --card:#ffffff;
+  --radius-s:8px;
+  --radius-m:14px;
+  --radius-l:22px;
+  --shadow-s:0 1px 2px rgba(19,94,107,.08),0 2px 8px rgba(19,94,107,.06);
+  --shadow-m:0 4px 18px rgba(19,94,107,.12);
+  --space-1:6px;--space-2:10px;--space-3:16px;--space-4:24px;--space-5:36px;--space-6:56px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --announce-h:38px;
+  --head-h:62px;
+  --sticky-sum:calc(var(--announce-h) + var(--head-h));
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);
+  line-height:1.75;font-size:16px;-webkit-text-size-adjust:100%;
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none!important;animation:none!important;}
+}
+img{max-width:100%;display:block;}
+a{color:var(--brand);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3,h4{margin:0;line-height:1.35;color:var(--brand-deep);}
+p{margin:0 0 var(--space-3);}
+ul,ol{margin:0 0 var(--space-3);padding-left:1.25em;}
+li{margin-bottom:6px;}
+section{scroll-margin-top:calc(var(--sticky-sum) + 14px);}
+[id]{scroll-margin-top:calc(var(--sticky-sum) + 14px);}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--space-4);}
+
+/* 公告条 */
+.announce{
+  position:sticky;top:0;z-index:60;height:var(--announce-h);
+  background:linear-gradient(90deg,var(--brand-deep),var(--brand));
+  color:#eaf7f9;font-size:13px;display:flex;align-items:center;
+}
+.announce .wrap{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:nowrap;overflow:hidden;}
+.announce strong{color:#fff;font-weight:600;white-space:nowrap;}
+.announce .an-txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.announce a{color:var(--water);text-decoration:underline;white-space:nowrap;}
+/* 页头 */
+.site-head{
+  position:sticky;top:var(--announce-h);z-index:55;height:var(--head-h);
+  background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);box-shadow:var(--shadow-s);
+}
+.head-inner{display:flex;align-items:center;gap:var(--space-3);height:var(--head-h);}
+.brand{display:flex;align-items:center;gap:10px;min-width:0;}
+.brand svg{flex:0 0 auto;}
+.brand .b-txt{font-weight:700;font-size:17px;color:var(--brand-deep);white-space:nowrap;}
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:4px;}
+.main-nav a{padding:6px 10px;border-radius:var(--radius-s);font-size:14px;color:var(--ink-2);white-space:nowrap;}
+.main-nav a:hover{background:var(--water-soft);color:var(--brand-deep);text-decoration:none;}
+.head-tools{display:flex;align-items:center;gap:8px;}
+.search-box{position:relative;display:flex;align-items:center;}
+.search-box input{
+  width:150px;padding:7px 10px;border:1px solid var(--line);border-radius:var(--radius-s);
+  font-size:13px;font-family:var(--font);background:#fff;color:var(--ink);
+}
+.search-box input:focus{outline:2px solid var(--water);outline-offset:1px;border-color:var(--water);}
+.search-result{
+  position:absolute;top:calc(100% + 6px);right:0;width:280px;max-height:260px;overflow:auto;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);box-shadow:var(--shadow-m);
+  padding:8px;display:none;z-index:70;font-size:13px;
+}
+.search-result.show{display:block;}
+.search-result a{display:block;padding:6px 8px;border-radius:6px;color:var(--ink-2);}
+.search-result a:hover{background:var(--water-soft);text-decoration:none;}
+.search-result .none{color:var(--ink-3);padding:8px;font-size:13px;}
+.menu-btn{
+  display:none;background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:7px 9px;cursor:pointer;color:var(--brand-deep);font-size:13px;font-family:var(--font);
+}
+.menu-btn:focus-visible,.main-nav a:focus-visible,.to-top:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1200px 340px at 85% -60px, rgba(127,217,230,.45), transparent 70%),
+    linear-gradient(160deg,#eef9fb 0%,#f7fbfc 60%,#fdf3ef 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-5);
+  align-items:center;padding:var(--space-6) 0 var(--space-5);
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+  color:var(--brand);font-size:13px;padding:4px 12px;border-radius:999px;margin-bottom:var(--space-3);
+  box-shadow:var(--shadow-s);
+}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;}
+.hero h1{font-size:clamp(27px,4vw,42px);letter-spacing:-.5px;margin-bottom:var(--space-3);}
+.hero .lede{font-size:16.5px;color:var(--ink-2);max-width:34em;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--space-4);}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;
+  font-size:15px;font-weight:600;border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-s);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-m);text-decoration:none;color:#fff;}
+.btn-ghost{background:#fff;color:var(--brand-deep);border-color:var(--line);}
+.btn-ghost:hover{transform:translateY(-2px);text-decoration:none;box-shadow:var(--shadow-s);}
+.hero-stats{display:flex;gap:var(--space-4);margin-top:var(--space-4);flex-wrap:wrap;}
+.hero-stats div{font-size:13px;color:var(--ink-3);}
+.hero-stats b{display:block;font-size:22px;color:var(--brand-deep);line-height:1.2;}
+.hero-art{position:relative;min-height:300px;display:flex;align-items:center;justify-content:center;}
+.hero-art svg{width:100%;height:auto;max-width:420px;}
+/* 主区布局 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--space-5);padding:var(--space-5) 0 var(--space-6);align-items:start;}
+.content-col{min-width:0;}
+.side-col{position:sticky;top:calc(var(--sticky-sum) + 16px);display:flex;flex-direction:column;gap:var(--space-4);}
+/* 板块通用 */
+.panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-l);
+  padding:var(--space-5);margin-bottom:var(--space-5);box-shadow:var(--shadow-s);
+}
+.panel > h2{font-size:22px;margin-bottom:6px;}
+.panel .sub{color:var(--ink-3);font-size:14px;margin-bottom:var(--space-4);}
+.sec-label{font-size:12px;letter-spacing:.14em;color:var(--accent);font-weight:700;text-transform:uppercase;}
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
+.ov-item{border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-3);background:#fbfefe;}
+.ov-item h3{font-size:15px;margin-bottom:4px;}
+.ov-item p{margin:0;font-size:13.5px;color:var(--ink-2);}
+/* 精选卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-3);}
+.card{
+  border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;background:#fff;
+  display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m);}
+.card img{width:100%;height:132px;object-fit:cover;background:var(--water-soft);}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1;}
+.card-body h3{font-size:15px;}
+.card-body p{margin:0;font-size:13px;color:var(--ink-2);}
+.card-meta{font-size:12px;color:var(--ink-3);margin-top:auto;display:flex;gap:8px;flex-wrap:wrap;}
+.tag{
+  display:inline-block;font-size:12px;padding:1px 9px;border-radius:999px;
+  background:var(--water-soft);color:var(--brand);border:1px solid #c9ecf2;
+}
+.tag.warm{background:var(--accent-soft);color:#a8461f;border-color:#f3d2c5;}
+/* 最新更新紧凑列表 */
+.update-list{list-style:none;padding:0;margin:0;}
+.update-list li{
+  display:grid;grid-template-columns:76px 1fr auto;gap:12px;align-items:baseline;
+  padding:11px 2px;border-bottom:1px dashed var(--line);font-size:14px;
+}
+.update-list li:last-child{border-bottom:none;}
+.update-list time{color:var(--ink-3);font-size:12.5px;font-variant-numeric:tabular-nums;}
+.update-list .u-main b{color:var(--brand-deep);}
+.update-list .u-main span{color:var(--ink-2);}
+/* 分类入口标签索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:10px;}
+.cat-index a{
+  display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;
+  background:#fff;border:1px solid var(--line);font-size:14px;color:var(--ink-2);
+}
+.cat-index a:hover{border-color:var(--water);background:var(--water-soft);color:var(--brand-deep);text-decoration:none;}
+.cat-index a .n{font-size:12px;color:var(--ink-3);}
+/* 深度解析 */
+.deep{padding-bottom:var(--space-3);}
+.deep h3{font-size:17px;margin:var(--space-4) 0 var(--space-2);padding-left:12px;border-left:4px solid var(--water);}
+.deep p{font-size:15.2px;color:var(--ink-2);}
+.deep blockquote{
+  margin:var(--space-4) 0;padding:var(--space-3) var(--space-4);border-left:4px solid var(--accent);
+  background:var(--accent-soft);color:#6b2f18;border-radius:0 var(--radius-m) var(--radius-m) 0;
+  font-size:15px;
+}
+.compare-table{width:100%;border-collapse:collapse;font-size:14px;margin:var(--space-3) 0 var(--space-4);}
+.compare-table th,.compare-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.compare-table th{background:var(--water-soft);color:var(--brand-deep);font-weight:600;}
+.check-list{list-style:none;padding:0;margin:var(--space-3) 0;}
+.check-list li{padding-left:28px;position:relative;font-size:14.5px;color:var(--ink-2);}
+.check-list li::before{
+  content:"✓";position:absolute;left:4px;top:0;color:var(--brand);font-weight:700;
+}
+/* 体验指南 编号步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:step;display:grid;gap:var(--space-3);}
+.steps li{
+  counter-increment:step;display:grid;grid-template-columns:38px 1fr;gap:14px;align-items:start;
+  border:1px solid var(--line);border-radius:var(--radius-m);padding:14px 16px;background:#fbfeff;
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);font-weight:700;color:var(--brand);
+  font-size:16px;background:var(--water-soft);border-radius:var(--radius-s);
+  display:flex;align-items:center;justify-content:center;height:34px;
+}
+.steps h3{font-size:15px;margin-bottom:2px;}
+.steps p{margin:0;font-size:13.5px;color:var(--ink-2);}
+/* FAQ */
+.faq details{
+  border:1px solid var(--line);border-radius:var(--radius-m);padding:0;margin-bottom:10px;background:#fff;
+  overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:13px 16px;font-weight:600;font-size:15px;color:var(--brand-deep);
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"＋";color:var(--brand);font-weight:700;flex:0 0 auto;}
+.faq details[open] summary::after{content:"－";}
+.faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;}
+.faq .ans{padding:0 16px 14px;font-size:14.2px;color:var(--ink-2);}
+.faq .ans p{margin:0;}
+/* 评论 */
+.comments{display:grid;gap:var(--space-3);}
+.comment{
+  border:1px solid var(--line);border-radius:var(--radius-m);padding:14px 16px;background:#fff;
+}
+.comment header{display:flex;align-items:center;gap:10px;margin-bottom:6px;font-size:13px;}
+.avatar{
+  width:30px;height:30px;border-radius:50%;background:var(--water-soft);color:var(--brand);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:0 0 auto;
+}
+.comment .who{font-weight:600;color:var(--brand-deep);}
+.comment time{color:var(--ink-3);font-size:12px;}
+.comment p{margin:0;font-size:14px;color:var(--ink-2);}
+.comment .ref{color:var(--ink-3);font-size:12.5px;margin-top:6px;}
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);}
+.news-item{border-left:3px solid var(--water);padding:2px 0 2px 14px;}
+.news-item h3{font-size:14.5px;margin-bottom:3px;}
+.news-item p{margin:0;font-size:13.2px;color:var(--ink-2);}
+.news-item time{font-size:12px;color:var(--ink-3);}
+/* 推荐标签 */
+.reco-tags{display:flex;flex-wrap:wrap;gap:9px;}
+.reco-tags a{
+  font-size:13.5px;padding:6px 13px;border-radius:var(--radius-s);background:var(--water-soft);
+  color:var(--brand-deep);border:1px solid #cdecf2;
+}
+.reco-tags a:hover{background:#d3f0f5;text-decoration:none;}
+/* 榜单 */
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:rank;}
+.rank-list li{
+  counter-increment:rank;display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;
+  padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px;
+}
+.rank-list li:last-child{border-bottom:none;}
+.rank-list li::before{
+  content:counter(rank);width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;
+}
+.rank-list li:nth-child(n+4)::before{background:#9db9bf;}
+.rank-list .score{font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;}
+/* 侧栏 */
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:var(--space-4);box-shadow:var(--shadow-s);
+}
+.side-card h2{font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.side-nav{list-style:none;padding:0;margin:0;display:grid;gap:2px;}
+.side-nav a{
+  display:block;padding:7px 10px;border-radius:var(--radius-s);font-size:13.5px;color:var(--ink-2);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:var(--water-soft);text-decoration:none;}
+.side-nav a.active{background:var(--water-soft);color:var(--brand-deep);border-left-color:var(--accent);font-weight:600;}
+.mini-quote{font-size:13.3px;color:var(--ink-2);border-left:3px solid var(--accent);padding-left:12px;}
+.mini-quote cite{display:block;font-style:normal;font-size:12px;color:var(--ink-3);margin-top:6px;}
+/* 页尾 */
+.site-foot{background:var(--brand-deep);color:#cfe4e8;padding:var(--space-6) 0 var(--space-4);}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:var(--space-4);}
+.site-foot h2,.site-foot h3{color:#fff;font-size:15px;margin-bottom:10px;}
+.site-foot p{font-size:13.5px;color:#a9c9ce;margin-bottom:10px;}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.foot-brand .b-txt{font-weight:700;color:#fff;font-size:16px;}
+.site-foot ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;}
+.site-foot ul a{color:#bcd8dd;font-size:13.5px;}
+.site-foot ul a:hover{color:#fff;}
+.foot-note{border-top:1px solid rgba(255,255,255,.14);margin-top:var(--space-5);padding-top:var(--space-3);font-size:12.5px;color:#8fb3b9;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;}
+/* 回顶 */
+.to-top{
+  position:fixed;right:20px;bottom:22px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--brand-deep);font-size:18px;cursor:pointer;
+  box-shadow:var(--shadow-m);display:none;align-items:center;justify-content:center;
+}
+.to-top.show{display:flex;}
+/* 响应式 */
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr;}
+  .side-col{position:static;order:2;}
+  .hero-inner{grid-template-columns:1fr;padding-top:var(--space-5);}
+  .hero-art{min-height:220px;order:-1;}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .overview-grid{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:820px){
+  .main-nav{
+    position:absolute;top:var(--head-h);left:0;right:0;background:#fff;border-bottom:1px solid var(--line);
+    flex-direction:column;align-items:stretch;padding:8px 16px 14px;gap:2px;display:none;
+    box-shadow:var(--shadow-m);
+  }
+  .main-nav.open{display:flex;}
+  .main-nav a{padding:10px 8px;font-size:15px;}
+  .menu-btn{display:inline-flex;}
+  .search-box input{width:110px;}
+}
+@media (max-width:600px){
+  :root{--space-5:26px;--space-6:38px;}
+  .wrap{padding:0 14px;}
+  .panel{padding:18px 15px;border-radius:var(--radius-m);}
+  .card-grid{grid-template-columns:1fr;}
+  .overview-grid{grid-template-columns:1fr;}
+  .news-grid{grid-template-columns:1fr;}
+  .update-list li{grid-template-columns:64px 1fr;gap:8px;}
+  .update-list li .u-tag{grid-column:2;}
+  .search-box input{width:86px;}
+  .foot-grid{grid-template-columns:1fr;}
+  .hero-actions .btn{width:100%;justify-content:center;}
+  .to-top{right:12px;bottom:14px;}
+  .announce .wrap{justify-content:flex-start;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 公告条 -->
+<div class="announce" role="region" aria-label="更新公告">
+  <div class="wrap">
+    <strong>更新 · 11月6日</strong>
+    <span class="an-txt">新增「雨后浅滩 4 段机位对比」与「喷嘴 3 档水压表」两份实测记录，末尾附现场噪音读数。</span>
+    <a href="/#latest">查看</a>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="/#hero" aria-label="返回首页顶部">
+      <svg width="34" height="34" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="15" fill="#135e6b"/>
+        <path d="M32 9c9 13 15 19.5 15 28a15 15 0 1 1-30 0c0-8.5 6-15 15-28z" fill="#7fd9e6"/>
+        <circle cx="26" cy="30" r="2.4" fill="#0c3f49"/>
+        <circle cx="38" cy="30" r="2.4" fill="#0c3f49"/>
+        <path d="M27 37c3 3 7 3 10 0" stroke="#0c3f49" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="b-txt">兔崽baby户外喷水</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选场景</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#channels">频道入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">观看反馈</a>
+    </nav>
+    <div class="head-tools">
+      <div class="search-box">
+        <input type="search" id="siteSearch" placeholder="搜索栏目或条目" aria-label="站内搜索" autocomplete="off">
+        <div class="search-result" id="searchResult" role="listbox" aria-label="搜索结果"></div>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="hero-badge"><span class="dot"></span>户外水景实拍 · 第 7 期归档</span>
+      <h1>兔崽baby户外喷水</h1>
+      <p class="lede">记录山涧、雨后浅滩、喷泉广场与溪口四类户外水景的喷水实拍。整理每次拍摄的水压档位、机位距离、风向北向和现场噪音，按日期逐条归档，方便对照回看。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#featured">看本期精选场景</a>
+        <a class="btn btn-ghost" href="/#guide">拍摄清单与装备</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>36</b>条场景记录</div>
+        <div><b>4</b>类户外水域</div>
+        <div><b>11</b>份水压实测表</div>
+        <div><b>2026-11-06</b>最近一次归档</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 340" role="img">
+        <defs>
+          <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#9ee4ee"/><stop offset="1" stop-color="#2f93a6"/>
+          </linearGradient>
+          <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#eaf8fb"/><stop offset="1" stop-color="#fdf2ec"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="420" height="340" rx="26" fill="url(#gSky)"/>
+        <circle cx="318" cy="74" r="30" fill="#ffe0d2"/>
+        <path d="M0 226c46-22 82 6 126-10s78-34 128-16 96 4 166-18v158H0z" fill="url(#gWater)" opacity=".9"/>
+        <path d="M0 250c54-16 88 10 138-4s92-26 140-8 88 0 142-20v122H0z" fill="#135e6b" opacity=".18"/>
+        <g stroke="#135e6b" stroke-width="4" stroke-linecap="round" fill="none">
+          <path d="M126 190c0-26 8-42 20-56"/>
+          <path d="M146 190c0-22 12-34 24-44"/>
+        </g>
+        <g fill="#7fd9e6">
+          <circle cx="120" cy="128" r="7"/><circle cx="138" cy="106" r="5"/>
+          <circle cx="152" cy="122" r="6"/><circle cx="168" cy="140" r="4.5"/>
+          <circle cx="112" cy="152" r="4"/><circle cx="176" cy="112" r="4"/>
+        </g>
+        <g fill="#e8724a">
+          <circle cx="118" cy="122" r="3"/><circle cx="146" cy="114" r="2.6"/><circle cx="166" cy="132" r="2.4"/>
+        </g>
+        <path d="M86 282h250" stroke="#0c3f49" stroke-width="3" stroke-linecap="round" opacity=".25"/>
+        <g fill="#0c3f49" opacity=".55">
+          <rect x="252" y="196" width="10" height="42" rx="4"/>
+          <rect x="276" y="182" width="10" height="56" rx="4"/>
+          <rect x="300" y="204" width="10" height="34" rx="4"/>
+        </g>
+        <path d="M60 300c40 10 92 12 140 4" stroke="#2f93a6" stroke-width="3" fill="none" stroke-linecap="round" opacity=".5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 主区 -->
+<div class="wrap layout">
+  <main class="content-col">
+
+    <!-- 1 领域概览 -->
+    <section class="panel" id="overview">
+      <span class="sec-label">领域概览</span>
+      <h2>户外喷水场景到底在看什么</h2>
+      <p class="sub">四类水域的水源、喷射口径与拍摄条件差异很大，先分清再挑片。</p>
+      <div class="overview-grid">
+        <div class="ov-item">
+          <h3>山涧细流</h3>
+          <p>落差 0.6—1.2 米，多为自然落水，水压低、噪音 55 分贝上下，适合近距离特写。</p>
+        </div>
+        <div class="ov-item">
+          <h3>雨后浅滩</h3>
+          <p>积水深度 3—8 厘米，踩踏溅射范围大，10 月 30 日那场雨后拍到最完整的一组。</p>
+        </div>
+        <div class="ov-item">
+          <h3>喷泉广场</h3>
+          <p>市政定时喷放，19:00 与 20:30 各一轮，单轮 12 分钟，水柱高度稳定在 2.4 米。</p>
+        </div>
+        <div class="ov-item">
+          <h3>溪口回水</h3>
+          <p>水面平缓，风向对镜头影响最大，北风 3 级时画面右侧容易糊。</p>
+        </div>
+        <div class="ov-item">
+          <h3>灌溉喷头</h3>
+          <p>农田旋转喷头每分钟 22 转，扇形覆盖 6 米，逆光时水雾层次最清晰。</p>
+        </div>
+        <div class="ov-item">
+          <h3>消防栓试水</h3>
+          <p>社区每月 15 日例行试水，持续 40 秒，水压约 0.35 兆帕，适合拍瞬时爆发。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="panel" id="featured">
+      <span class="sec-label">精选推荐</span>
+      <h2>本期值得回看的四组喷水记录</h2>
+      <p class="sub">按画面完成度、水压数据完整性、可复现性三条标准筛出。</p>
+      <div class="card-grid">
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzai-water-01/640/420" width="640" height="420" loading="lazy" alt="山涧石缝间细流喷射特写，背景为湿滑岩面">
+          <div class="card-body">
+            <span class="tag">山涧细流</span>
+            <h3>石缝细流第 12 组：0.6 米落差下的连续喷点</h3>
+            <p>连续拍摄 47 秒，水流在第二块青石处分成三股，慢放 0.5 倍后颗粒清楚。</p>
+            <div class="card-meta"><span>2026-11-04</span><span>机位 1.2 米</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzai-water-02/640/420" width="640" height="420" loading="lazy" alt="雨后浅滩积水被踩出扇形水花，远处有低矮草丛">
+          <div class="card-body">
+            <span class="tag warm">雨后浅滩</span>
+            <h3>浅滩踩水 4 段机位对比：贴地拍最稳</h3>
+            <p>同一条浅滩，贴地 15 厘米、齐腰 90 厘米、俯拍 2.1 米三种高度，水花形状差别明显。</p>
+            <div class="card-meta"><span>2026-11-06</span><span>3 档高度</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzai-water-03/640/420" width="640" height="420" loading="lazy" alt="夜间喷泉广场水柱被灯光照亮，地面反光">
+          <div class="card-body">
+            <span class="tag">喷泉广场</span>
+            <h3>19:00 喷泉首轮：12 分钟里哪 40 秒最好看</h3>
+            <p>开喷后第 3 分 10 秒到第 3 分 50 秒水柱最齐，风也最小，之后开始偏斜。</p>
+            <div class="card-meta"><span>2026-11-02</span><span>单轮 12 分钟</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzai-water-04/640/420" width="640" height="420" loading="lazy" alt="农田旋转喷头喷出扇形水雾，逆光下形成光斑">
+          <div class="card-body">
+            <span class="tag">灌溉喷头</span>
+            <h3>旋转喷头逆光拍摄：22 转/分的节奏怎么卡</h3>
+            <p>每转 2.7 秒，扇面扫过镜头一次，连拍 9 张能抓到 2 张完整水雾。</p>
+            <div class="card-meta"><span>2026-10-28</span><span>连拍 9 张</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="panel" id="latest">
+      <span class="sec-label">最新更新</span>
+      <h2>近十天的归档条目</h2>
+      <p class="sub">每条都带拍摄日期与水压或水量参数，便于直接对照。</p>
+      <ul class="update-list">
+        <li><time datetime="2026-11-06">11月6日</time><span class="u-main"><b>浅滩踩水机位对比</b>：补入贴地视角原始片段 <span>2 段</span></span><span class="u-tag tag warm">新增</span></li>
+        <li><time datetime="2026-11-05">11月5日</time><span class="u-main"><b>喷嘴 3 档水压表</b>：0.18 / 0.26 / 0.35 兆帕读数整理</span><span class="u-tag tag">数据</span></li>
+        <li><time datetime="2026-11-04">11月4日</time><span class="u-main"><b>山涧石缝第 12 组</b>：47 秒连续喷点补拍完成</span><span class="u-tag tag">补拍</span></li>
+        <li><time datetime="2026-11-02">11月2日</time><span class="u-main"><b>喷泉首轮节选</b>：第 3 分 10 秒标注为最佳区段</span><span class="u-tag tag">标注</span></li>
+        <li><time datetime="2026-10-30">10月30日</time><span class="u-main"><b>雨后浅滩</b>：积水深 6 厘米记录，风向北 2 级</span><span class="u-tag tag">归档</span></li>
+        <li><time datetime="2026-10-28">10月28日</time><span class="u-main"><b>旋转喷头逆光</b>：补入 22 转/分实测计时</span><span class="u-tag tag">实测</span></li>
+        <li><time datetime="2026-10-26">10月26日</time><span class="u-main"><b>溪口回水</b>：北风 3 级时右侧糊片比例 4/9</span><span class="u-tag tag">复盘</span></li>
+        <li><time datetime="2026-10-20">10月20日</time><span class="u-main"><b>消防栓试水</b>：40 秒窗口拆成 3 段慢放</span><span class="u-tag tag">拆条</span></li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="panel" id="channels">
+      <span class="sec-label">频道入口</span>
+      <h2>按水域类型找记录</h2>
+      <p class="sub">每个入口下是独立条目列表，参数表与画面分开存放。</p>
+      <div class="cat-index">
+        <a href="/#featured">山涧流水拍摄 <span class="n">9 条</span></a>
+        <a href="/#featured">浅滩踩水机位 <span class="n">7 条</span></a>
+        <a href="/#featured">城市喷泉时段 <span class="n">6 条</span></a>
+        <a href="/#deep">水压档位对照 <span class="n">11 表</span></a>
+        <a href="/#guide">慢门水雾参数 <span class="n">5 组</span></a>
+        <a href="/#featured">溪口风向记录 <span class="n">4 条</span></a>
+        <a href="/#guide">喷头旋转节拍 <span class="n">3 条</span></a>
+        <a href="/#latest">消防栓试水窗口 <span class="n">2 条</span></a>
+        <a href="/#comments">现场噪音读数 <span class="n">8 点</span></a>
+        <a href="/#deep">逆光水雾层次 <span class="n">4 条</span></a>
+        <a href="/#guide">防潮装备清单 <span class="n">6 项</span></a>
+        <a href="/#faq">雨后积水判断 <span class="n">5 问</span></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析（唯一主体阅读区） -->
+    <section class="panel deep" id="deep">
+      <span class="sec-label">深度解析</span>
+      <h2>水压不是越大越好看：三个可核对的判断</h2>
+      <p>同样一支喷嘴，0.35 兆帕时水柱能冲到 2.4 米，但画面里最容易失焦的恰恰是这一档。下面三个判断都能用具体读数复核。</p>
+
+      <h3>判断一：0.26 兆帕是多数户外场景的可用上限</h3>
+      <p>11 月 5 日整理的三档读数里，0.18 兆帕水柱高 1.1 米，边缘完整；0.26 兆帕升到 1.8 米，水滴开始分裂；0.35 兆帕冲到 2.4 米，但距喷嘴 1 米外已有明显横向飘移。快门 1/1000 秒下，0.26 档的清晰帧占比 78%，0.35 档降到 61%。这不是设备问题，是水柱越高、受侧风影响越大。</p>
+      <blockquote>要拍水柱形态，把压力收到 0.26 兆帕；要拍爆发感，才用 0.35，并且把机位撤到 1.5 米外。</blockquote>
+
+      <h3>判断二：贴地 15 厘米的机位在浅滩场景胜出，但代价是防潮风险</h3>
+      <p>10 月 30 日雨后浅滩，同一段踩水动作拍了三次：贴地 15 厘米、齐腰 90 厘米、俯拍 2.1 米。贴地视角水花占画面 62%，层次最完整；齐腰视角只剩 34%，俯拍则被水面反光吃掉细节。代价很直接——贴地那次镜头前玉被溅到 7 次，擦镜布用了 3 张。11 月 6 日补拍时换了带遮光罩的低机位支架，溅水降到 2 次。</p>
+      <table class="compare-table">
+        <thead>
+          <tr><th>机位高度</th><th>水花画面占比</th><th>溅水次数</th><th>适用场景</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>贴地 15 厘米</td><td>62%</td><td>7 次 / 2 次（加罩后）</td><td>浅滩踩水、石缝细流</td></tr>
+          <tr><td>齐腰 90 厘米</td><td>34%</td><td>1 次</td><td>喷泉中景、溪口全景</td></tr>
+          <tr><td>俯拍 2.1 米</td><td>21%</td><td>0 次</td><td>喷头旋转、广场大范围</td></tr>
+        </tbody>
+      </table>
+
+      <h3>判断三：风向对溪口画面的影响被低估，北风 3 级就该改拍侧逆光</h3>
+      <p>10 月 26 日溪口回水那段，北风 3 级，9 张连拍里有 4 张右侧糊掉。同一天换成侧逆光机位、把主体放在画面左三分之一，糊片降到 1 张。说法差异在这里：有观众留言认为是水面反光过曝，实际比对原片 EXIF，糊的那 4 张快门都是 1/500 秒，而清晰的 5 张是 1/1000 秒——主因是快门不够，不是曝光。这条推测已在 10 月 30 日的补拍里验证：同样北风 3 级，1/1000 秒下 8 张里只有 1 张轻微发虚。</p>
+
+      <h3>可核对清单</h3>
+      <ul class="check-list">
+        <li>水压表读数：0.18 / 0.26 / 0.35 兆帕，日期 2026-11-05</li>
+        <li>喷泉单轮时长：12 分钟，最佳区段 3:10—3:50，日期 2026-11-02</li>
+        <li>浅滩积水深度：6 厘米，风向记录北 2 级，日期 2026-10-30</li>
+        <li>旋转喷头转速：22 转/分，单圈 2.7 秒，日期 2026-10-28</li>
+        <li>消防栓试水窗口：40 秒，压力约 0.35 兆帕，日期 2026-10-20</li>
+      </ul>
+      <p>需要说明的是，以上判断都基于固定机位与同一支喷嘴，换设备后数值会变。11 月 6 日的补拍已换用短焦镜头，贴地视角水花占比从前次的 62% 提到 71%，说明焦距对画面占比的影响不比机位小。</p>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="panel" id="guide">
+      <span class="sec-label">体验指南</span>
+      <h2>第一次去户外拍喷水，按这个顺序准备</h2>
+      <p class="sub">从选点到收工，六步，每步都有具体数字可对照。</p>
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>前一天确认水源与喷放时间</h3>
+            <p>市政喷泉看公告牌，19:00 与 20:30 各一轮；消防栓试水固定每月 15 日，只有 40 秒。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>查风向与积水深度</h3>
+            <p>北风 3 级以上改拍侧逆光；浅滩积水低于 3 厘米时踩不出完整水花，等到 6 厘米再拍。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>机位先定高度，再定距离</h3>
+            <p>贴地 15 厘米拍浅滩，齐腰 90 厘米拍喷泉中景，距离喷嘴 1.2—1.5 米。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>快门优先，1/1000 秒起步</h3>
+            <p>水雾要颗粒感就降到 1/500，但北风天会糊；慢门 1/60 秒只适合无风的溪口平水面。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>防潮三件套：遮光罩、擦镜布、防水袋</h3>
+            <p>贴地拍摄一次准备 3 张擦镜布，镜头前玉溅水超过 5 次就换位置。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>收工前补录环境噪音</h3>
+            <p>山涧约 55 分贝，喷泉广场 68 分贝，消防栓试水瞬间 74 分贝，方便后期配声对齐。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="panel faq" id="faq">
+      <span class="sec-label">常见问题</span>
+      <h2>拍摄前最常被问到的六件事</h2>
+      <details>
+        <summary>户外喷水的水压多大适合拍慢门？</summary>
+        <div class="ans"><p>水压 0.18 兆帕时水柱只有 1.1 米，慢门 1/60 秒能拉出连续水线；到 0.26 兆帕以上水柱开始分裂，慢门会变成白茫茫一片，这时改 1/500 秒更稳。</p></div>
+      </details>
+      <details>
+        <summary>雨后浅滩踩水，积水多深才拍得出水花？</summary>
+        <div class="ans"><p>积水 6 厘米时，正常步幅踩下去水花能到小腿高度，画面占比约六成；低于 3 厘米只能拍到溅点，高于 10 厘米水花会连成一片，反而看不出形状。</p></div>
+      </details>
+      <details>
+        <summary>喷泉广场几点拍人最少？</summary>
+        <div class="ans"><p>19:00 首轮人最多，20:30 第二轮散场后能空出约 8 米宽的拍摄带。单轮 12 分钟，前 3 分钟水柱最齐，最后 2 分钟水压会略降。</p></div>
+      </details>
+      <details>
+        <summary>溪口北风天为什么总是右侧发虚？</summary>
+        <div class="ans"><p>北风从画面右后方吹来，水雾被推向右前方，正好落在右三分之一的对焦区外。把快门提到 1/1000 秒，或者把主体移到左三分之一，虚化比例能从 4/9 降到 1/8。</p></div>
+      </details>
+      <details>
+        <summary>旋转喷头每转一圈多久，怎么卡点连拍？</summary>
+        <div class="ans"><p>实测 22 转/分，单圈 2.7 秒，扇面扫过镜头约 0.4 秒。连拍 9 张、间隔 0.3 秒，通常能抓到 2 张完整水雾，逆光时成功率还会高一点。</p></div>
+      </details>
+      <details>
+        <summary>消防栓试水只有 40 秒，来得及换机位吗？</summary>
+        <div class="ans"><p>来不及。40 秒里前 5 秒是压力爬升，后 10 秒开始回落，真正稳定的只有中间 25 秒。建议提前架好两个机位，一台贴地拍爆发，一台齐腰拍全景，后期再挑。</p></div>
+      </details>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="panel" id="comments">
+      <span class="sec-label">观看反馈</span>
+      <h2>观众与同好留下的七条留言</h2>
+      <p class="sub">按留言时间排列，保留原话，包含不同意见。</p>
+      <div class="comments">
+        <article class="comment">
+          <header><span class="avatar">林</span><span class="who">林间慢拍</span><time datetime="2026-11-06">11月6日 21:14</time></header>
+          <p>浅滩那组贴地视角确实好看，但镜头前玉溅了 7 次这个数字太真实了。我上周在同一个浅滩拍，擦镜布带少了，最后只能靠衣角。</p>
+          <div class="ref">指向：雨后浅滩踩水 4 段机位对比</div>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">周</span><span class="who">周口老陈</span><time datetime="2026-11-06">11月6日 18:02</time></header>
+          <p>0.26 兆帕是上限这个说法我不太同意。喷泉广场那组 0.35 兆帕拍出来的水柱高，气势完全不一样，糊几张可以接受。</p>
+          <div class="ref">指向：深度解析判断一</div>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">阿</span><span class="who">阿岚</span><time datetime="2026-11-05">11月5日 23:40</time></header>
+          <p>三档水压表很实用，照着 0.18 兆帕拍了一段慢门，水线果然连得起来。就是表里没写气温，不知道低温会不会影响读数。</p>
+          <div class="ref">指向：喷嘴 3 档水压表</div>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">禾</span><span class="who">禾木溪</span><time datetime="2026-11-04">11月4日 12:26</time></header>
+          <p>石缝细流第 12 组那 47 秒，第二块青石处分三股的地方我反复看了五遍。不过整体节奏偏慢，前 20 秒其实可以剪掉。</p>
+          <div class="ref">指向：石缝细流第 12 组</div>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">夜</span><span class="who">夜跑不拍照</span><time datetime="2026-11-03">11月3日 20:55</time></header>
+          <p>路过喷泉广场看过几次，没觉得有什么特别。水柱高度是稳定，但灯光就那两种颜色，看两轮就腻了。</p>
+          <div class="ref">指向：19:00 喷泉首轮</div>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">测</span><span class="who">测光小赵</span><time datetime="2026-11-02">11月2日 22:08</time></header>
+          <p>溪口那段关于快门和曝光的争议，我倾向快门不够的说法。原片 EXIF 里 1/500 秒那几张，右边缘的水珠确实有拖影，不是过曝。</p>
+          <div class="ref">指向：深度解析判断三</div>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">稻</span><span class="who">稻田边的猫</span><time datetime="2026-10-29">10月29日 09:37</time></header>
+          <p>旋转喷头 22 转/分这个数据准。我们田里那台也是这个转速，逆光时水雾像扇子一样扫过来，连拍 9 张能抓到 2 张，和我数的一样。</p>
+          <div class="ref">指向：旋转喷头逆光拍摄</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="panel" id="news">
+      <span class="sec-label">相关资讯</span>
+      <h2>与水景拍摄相关的四条动向</h2>
+      <div class="news-grid">
+        <div class="news-item">
+          <time datetime="2026-11-05">11月5日</time>
+          <h3>市区三处喷泉冬季时段调整</h3>
+          <p>19:00 与 20:30 两轮不变，单轮从 12 分钟缩到 9 分钟，夜间照明提前半小时关闭。</p>
+        </div>
+        <div class="news-item">
+          <time datetime="2026-11-01">11月1日</time>
+          <h3>浅滩上游闸口检修公告</h3>
+          <p>11 月 1 日至 9 日每天 8:00—16:00 放水，下游积水深度会从 6 厘米降到 3 厘米以下。</p>
+        </div>
+        <div class="news-item">
+          <time datetime="2026-10-30">10月30日</time>
+          <h3>雨后山区道路临时管制</h3>
+          <p>溪口便道 10 月 30 日 14:00 起限行，车辆停在外侧 200 米停车带，步行进入需 12 分钟。</p>
+        </div>
+        <div class="news-item">
+          <time datetime="2026-10-24">10月24日</time>
+          <h3>社区消防栓试水新增一次</h3>
+          <p>除每月 15 日外，11 月起增加 28 日一次，时段同为 40 秒，压力仍有约 0.35 兆帕。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="panel" id="reco">
+      <span class="sec-label">相关推荐</span>
+      <h2>可能还想对照的条目</h2>
+      <div class="reco-tags">
+        <a href="/#featured">山涧流水拍摄</a>
+        <a href="/#featured">浅滩踩水机位</a>
+        <a href="/#deep">水压档位对照</a>
+        <a href="/#guide">慢门水雾参数</a>
+        <a href="/#guide">喷头旋转节拍</a>
+        <a href="/#guide">防潮装备清单</a>
+        <a href="/#featured">城市喷泉时段</a>
+        <a href="/#comments">现场噪音读数</a>
+        <a href="/#faq">雨后积水判断</a>
+        <a href="/#deep">逆光水雾层次</a>
+      </div>
+    </section>
+
+    <!-- 11 补充板块：时间线 -->
+    <section class="panel" id="timeline">
+      <span class="sec-label">时间线</span>
+      <h2>一条溪口从雨后到退水的拍摄记录</h2>
+      <p class="sub">同一地点，四个时间点，水量和画面都能对上。</p>
+      <ul class="update-list">
+        <li><time datetime="2026-10-30">10月30日 15:20</time><span class="u-main"><b>雨后 40 分钟</b>：溪口水位上涨 12 厘米，水流混浊，能见度低</span><span class="u-tag tag warm">涨水</span></li>
+        <li><time datetime="2026-10-31">10月31日 09:10</time><span class="u-main"><b>雨停次日</b>：水位回落 5 厘米，混浊度下降，水花边缘开始清楚</span><span class="u-tag tag">转清</span></li>
+        <li><time datetime="2026-11-02">11月2日 17:45</time><span class="u-main"><b>退水第 3 天</b>：水面平缓，北风 2 级，适合拍侧逆光倒影</span><span class="u-tag tag">最佳</span></li>
+        <li><time datetime="2026-11-06">11月6日 11:30</time><span class="u-main"><b>闸口放水期</b>：上游来水变小，溪口宽度收窄约 1.5 米</span><span class="u-tag tag">收窄</span></li>
+      </ul>
+    </section>
+
+    <!-- 12 补充板块：榜单 -->
+    <section class="panel" id="rank">
+      <span class="sec-label">榜单</span>
+      <h2>按可复现性排的五个场景</h2>
+      <p class="sub">评分只看三件事：参数是否可重复、机位是否好找、天气依赖程度。</p>
+      <ol class="rank-list">
+        <li><span>喷泉广场 19:00 首轮</span><span class="score">可复现 9.2</span></li>
+        <li><span>浅滩踩水贴地 15 厘米</span><span class="score">可复现 8.6</span></li>
+        <li><span>旋转喷头逆光连拍</span><span class="score">可复现 8.1</span></li>
+        <li><span>山涧石缝细流</span><span class="score">可复现 7.4</span></li>
+        <li><span>溪口北风侧逆光</span><span class="score">可复现 6.5</span></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- 侧栏 -->
+  <aside class="side-col" aria-label="侧栏导航与摘录">
+    <nav class="side-card" aria-label="栏目导航">
+      <h2>栏目导航</h2>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#featured">精选场景</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">频道入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">观看反馈</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#reco">相关推荐</a></li>
+        <li><a href="/#timeline">溪口时间线</a></li>
+        <li><a href="/#rank">场景榜单</a></li>
+      </ul>
+    </nav>
+    <div class="side-card">
+      <h2>现场摘录</h2>
+      <p class="mini-quote">「0.26 兆帕时清晰帧占 78%，0.35 兆帕降到 61%，水柱越高越吃风。」<cite>—— 11月5日水压表附注</cite></p>
+      <p class="mini-quote">「贴地那次镜头前玉被溅 7 次，加遮光罩后降到 2 次。」<cite>—— 11月6日浅滩补拍记录</cite></p>
+    </div>
+    <div class="side-card">
+      <h2>数据说明</h2>
+      <p style="font-size:13px;color:var(--ink-2);margin:0;">页内水压、转速、噪音读数均为现场手持仪表记录，单次测量，未做多次平均。示例条目按垂类特征生成，用于说明记录方法。</p>
+    </div>
+  </aside>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg width="30" height="30" viewBox="0 0 64 64" role="img" aria-label="兔崽baby户外喷水标志">
+            <rect width="64" height="64" rx="15" fill="#7fd9e6"/>
+            <path d="M32 9c9 13 15 19.5 15 28a15 15 0 1 1-30 0c0-8.5 6-15 15-28z" fill="#0c3f49"/>
+            <circle cx="26" cy="30" r="2.2" fill="#7fd9e6"/>
+            <circle cx="38" cy="30" r="2.2" fill="#7fd9e6"/>
+          </svg>
+          <span class="b-txt">兔崽baby户外喷水</span>
+        </div>
+        <p>专注户外水景实拍归档：记录水压、机位与天气条件，按日期逐条对照。</p>
+      </div>
+      <div>
+        <h3>场景频道</h3>
+        <ul>
+          <li><a href="/#featured">山涧流水拍摄</a></li>
+          <li><a href="/#featured">浅滩踩水机位</a></li>
+          <li><a href="/#featured">城市喷泉时段</a></li>
+          <li><a href="/#featured">溪口风向记录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>方法栏目</h3>
+        <ul>
+          <li><a href="/#deep">水压档位对照</a></li>
+          <li><a href="/#guide">慢门水雾参数</a></li>
+          <li><a href="/#guide">防潮装备清单</a></li>
+          <li><a href="/#faq">雨后积水判断</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>反馈与归档</h3>
+        <ul>
+          <li><a href="/#comments">观看反馈</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#timeline">溪口时间线</a></li>
+          <li><a href="/#rank">场景榜单</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>页面更新：2026-11-06 · 对应正文「浅滩踩水 4 段机位对比」与「最新更新」两条记录。</span>
+      <span>示例数据说明：水压、转速、噪音为单次现场仪表读数，条目按垂类特征生成。© 2026 兔崽baby户外喷水</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  // 移动菜单
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  menuBtn.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 820){
+      mainNav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ mainNav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+  });
+
+  // 搜索
+  var input = document.getElementById('siteSearch');
+  var result = document.getElementById('searchResult');
+  var index = [];
+  document.querySelectorAll('main section').forEach(function(sec){
+    var h2 = sec.querySelector('h2');
+    if(h2 && sec.id){ index.push({id:sec.id, text:h2.textContent.trim(), kind:'栏目'}); }
+  });
+  document.querySelectorAll('main h3').forEach(function(h3){
+    var sec = h3.closest('section');
+    if(sec && sec.id){ index.push({id:sec.id, text:h3.textContent.trim(), kind:'条目'}); }
+  });
+  document.querySelectorAll('.faq summary').forEach(function(s){
+    var sec = s.closest('section');
+    if(sec && sec.id){ index.push({id:sec.id, text:s.textContent.trim(), kind:'问答'}); }
+  });
+  function doSearch(){
+    var q = input.value.trim();
+    result.innerHTML = '';
+    if(!q){ result.classList.remove('show'); return; }
+    var hits = index.filter(function(it){ return it.text.indexOf(q) !== -1; }).slice(0,10);
+    if(hits.length === 0){
+      result.innerHTML = '<div class="none">没有找到「'+ q.replace(/</g,'&lt;') +'」，试试“浅滩”“水压”“喷泉”。</div>';
+    } else {
+      hits.forEach(function(it){
+        var a = document.createElement('a');
+        a.href = '/#' + it.id;
+        a.textContent = it.kind + ' · ' + it.text;
+        a.addEventListener('click', function(){ result.classList.remove('show'); });
+        result.appendChild(a);
+      });
+    }
+    result.classList.add('show');
+  }
+  input.addEventListener('input', doSearch);
+  input.addEventListener('focus', function(){ if(input.value.trim()) doSearch(); });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.search-box')) result.classList.remove('show');
+  });
+
+  // 侧栏滚动高亮
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){ return document.getElementById(a.getAttribute('href').slice(2)); }).filter(Boolean);
+  function highlight(){
+    var pos = window.scrollY + 140;
+    var current = null;
+    sections.forEach(function(sec){ if(sec.offsetTop <= pos) current = sec.id; });
+    sideLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '/#' + current);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    toTop.classList.toggle('show', window.scrollY > 560);
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"兔崽baby户外喷水",
+  "description":"户外水景实拍归档，记录水压档位、机位高度与天气条件，按日期逐条更新。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"户外喷水的水压多大适合拍慢门？","acceptedAnswer":{"@type":"Answer","text":"水压 0.18 兆帕时水柱只有 1.1 米，慢门 1/60 秒能拉出连续水线；到 0.26 兆帕以上水柱开始分裂，慢门会变成白茫茫一片，这时改 1/500 秒更稳。"}},
+    {"@type":"Question","name":"雨后浅滩踩水，积水多深才拍得出水花？","acceptedAnswer":{"@type":"Answer","text":"积水 6 厘米时，正常步幅踩下去水花能到小腿高度，画面占比约六成；低于 3 厘米只能拍到溅点，高于 10 厘米水花会连成一片，反而看不出形状。"}},
+    {"@type":"Question","name":"喷泉广场几点拍人最少？","acceptedAnswer":{"@type":"Answer","text":"19:00 首轮人最多，20:30 第二轮散场后能空出约 8 米宽的拍摄带。单轮 12 分钟，前 3 分钟水柱最齐，最后 2 分钟水压会略降。"}},
+    {"@type":"Question","name":"溪口北风天为什么总是右侧发虚？","acceptedAnswer":{"@type":"Answer","text":"北风从画面右后方吹来，水雾被推向右前方，正好落在右三分之一的对焦区外。把快门提到 1/1000 秒，或者把主体移到左三分之一，虚化比例能从 4/9 降到 1/8。"}},
+    {"@type":"Question","name":"旋转喷头每转一圈多久，怎么卡点连拍？","acceptedAnswer":{"@type":"Answer","text":"实测 22 转/分，单圈 2.7 秒，扇面扫过镜头约 0.4 秒。连拍 9 张、间隔 0.3 秒，通常能抓到 2 张完整水雾，逆光时成功率还会高一点。"}},
+    {"@type":"Question","name":"消防栓试水只有 40 秒，来得及换机位吗？","acceptedAnswer":{"@type":"Answer","text":"来不及。40 秒里前 5 秒是压力爬升，后 10 秒开始回落，真正稳定的只有中间 25 秒。建议提前架好两个机位，一台贴地拍爆发，一台齐腰拍全景，后期再挑。"}}
+  ]
+}
+</script>
+</body>
+  </html>
