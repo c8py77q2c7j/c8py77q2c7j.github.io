@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>91传媒直播-直播选品与栏目观察</title>
+<meta name="description" content="91传媒直播栏目与选品观察：梳理晚间档、带货专场、才艺频道的排期变化，给出开播前核查清单、观众体验指南、主播证言与常见问题解答，附示例数据说明与更新记录。">
+<meta name="keywords" content="91传媒直播">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Ccircle cx='32' cy='30' r='13' fill='none' stroke='%23ff6b4a' stroke-width='4'/%3E%3Cpolygon points='28,22 28,38 40,30' fill='%23ffd166'/%3E%3Crect x='14' y='48' width='36' height='5' rx='2.5' fill='%23ff6b4a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#141b26;
+  --ink-2:#3c4757;
+  --ink-3:#6b7688;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --line:#e0ddd5;
+  --navy:#1b2a4a;
+  --navy-2:#243a63;
+  --coral:#e8543a;
+  --coral-soft:#fde8e2;
+  --gold:#c98a1b;
+  --gold-soft:#fbf0d5;
+  --teal:#1f6f66;
+  --teal-soft:#e2f1ee;
+  --radius:12px;
+  --radius-s:8px;
+  --pad:clamp(14px,2.4vw,24px);
+  --shadow:0 1px 2px rgba(20,27,38,.06),0 8px 24px -14px rgba(20,27,38,.28);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--navy-2);text-decoration:none}
+a:hover{color:var(--coral)}
+h1,h2,h3,h4{margin:0;line-height:1.4;font-weight:700}
+p{margin:0}
+ul,ol{margin:0;padding:0}
+li{list-style:none}
+button{font-family:inherit;font-size:inherit;cursor:pointer}
+[id]{scroll-margin-top:112px}
+.wrap{width:min(1180px,100% - 2*var(--pad));margin-inline:auto}
+.skip{position:absolute;left:8px;top:-60px;background:var(--navy);color:#fff;padding:8px 14px;border-radius:var(--radius-s);z-index:99}
+.skip:focus{top:8px}
+
+/* ---------- 吸顶公告 + 页头 ---------- */
+.stick-top{position:sticky;top:0;z-index:50}
+.notice{
+  background:var(--navy);
+  color:#e8ecf4;
+  font-size:13.5px;
+  letter-spacing:.01em;
+}
+.notice .wrap{display:flex;gap:14px;align-items:center;padding-block:7px;flex-wrap:wrap}
+.notice-tag{
+  background:var(--coral);color:#fff;font-weight:700;font-size:12px;
+  padding:2px 8px;border-radius:4px;flex:none;
+}
+.notice-text{flex:1 1 260px;min-width:0}
+.notice-text strong{color:#ffd166;font-weight:700}
+.notice a{color:#ffd166;text-decoration:underline;text-underline-offset:3px}
+
+.site-head{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 2px 10px -6px rgba(20,27,38,.25);
+}
+.head-inner{display:flex;align-items:center;gap:18px;padding-block:11px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-text b{font-size:18px;letter-spacing:.02em;color:var(--navy)}
+.brand-text span{font-size:11px;color:var(--ink-3);letter-spacing:.14em}
+.head-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1 1 300px}
+.head-nav a{
+  font-size:14px;color:var(--ink-2);padding:6px 10px;border-radius:6px;white-space:nowrap;
+}
+.head-nav a:hover{background:var(--coral-soft);color:var(--coral)}
+.head-tools{display:flex;gap:8px;align-items:center;flex:none}
+.search-box{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff;padding:3px 4px 3px 12px}
+.search-box input{
+  border:0;outline:0;background:transparent;font-size:14px;width:132px;color:var(--ink);
+}
+.search-box input:focus{width:150px}
+.search-box button{
+  border:0;background:var(--navy);color:#fff;border-radius:999px;padding:5px 12px;font-size:13px;
+}
+.search-box button:hover{background:var(--navy-2)}
+.search-box button:focus-visible,.menu-btn:focus-visible,.head-nav a:focus-visible,.btn:focus-visible,
+details summary:focus-visible, .totop:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 10px;font-size:14px;color:var(--navy);
+}
+#searchStatus{font-size:12.5px;color:var(--ink-3);width:100%;padding-top:2px}
+#searchStatus b{color:var(--coral)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;
+  background:
+    radial-gradient(900px 380px at 88% -10%, #2d4470 0%, transparent 62%),
+    linear-gradient(160deg,#1b2a4a 0%,#16233c 58%,#101a2d 100%);
+  color:#eef2f8;
+  overflow:hidden;
+}
+.hero-inner{
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:32px;align-items:center;padding-block:52px 56px;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.1em;
+  color:#ffd166;border:1px solid rgba(255,209,102,.5);padding:3px 10px;border-radius:999px;margin-bottom:16px;
+}
+.hero-tag i{width:6px;height:6px;border-radius:50%;background:#ff6b4a;display:inline-block}
+.hero h1{font-size:clamp(28px,4.4vw,46px);letter-spacing:.01em;color:#fff}
+.hero-lead{margin-top:14px;color:#c9d4e6;font-size:15.5px;max-width:34em}
+.hero-facts{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px}
+.hero-fact b{display:block;font-size:24px;color:#ffd166;line-height:1.2}
+.hero-fact span{font-size:12.5px;color:#a9b6cc}
+.hero-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.btn{
+  display:inline-block;padding:9px 18px;border-radius:999px;font-size:14.5px;font-weight:600;
+  border:1px solid transparent;transition:transform .15s ease,background .15s ease;
+}
+.btn-main{background:var(--coral);color:#fff}
+.btn-main:hover{background:#f0644a;color:#fff;transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#eef2f8}
+.btn-ghost:hover{border-color:#ffd166;color:#ffd166;transform:translateY(-2px)}
+.hero-art{position:relative;min-height:280px}
+.hero-art svg{width:100%;height:auto;display:block}
+.hero-note{position:absolute;right:6px;bottom:-6px;font-size:11.5px;color:#8b9ab5;text-align:right}
+
+/* ---------- 版块通用 ---------- */
+.sec{padding-block:44px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px;border-bottom:2px solid var(--navy);padding-bottom:10px}
+.sec-head h2{font-size:clamp(20px,2.4vw,25px);color:var(--navy);display:flex;align-items:center;gap:10px}
+.sec-head h2 .num{font-size:12px;font-weight:700;color:var(--coral);border:1px solid var(--coral);padding:0 6px;border-radius:4px;letter-spacing:.06em}
+.sec-head .hint{font-size:13px;color:var(--ink-3);max-width:46em}
+.lead-line{color:var(--ink-2);font-size:15px;margin-bottom:18px;max-width:60em}
+.lead-line b{color:var(--navy);font-weight:700}
+
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g2u{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr)}
+
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;
+}
+.card h3{font-size:16.5px;color:var(--navy)}
+.card p{font-size:14px;color:var(--ink-2)}
+.meta{font-size:12px;color:var(--ink-3);display:flex;gap:10px;flex-wrap:wrap}
+.meta .tag{background:var(--teal-soft);color:var(--teal);padding:1px 7px;border-radius:4px;font-weight:600}
+.meta .tag.c{background:var(--coral-soft);color:var(--coral)}
+.meta .tag.g{background:var(--gold-soft);color:#8a5c05}
+.card .more{margin-top:auto;font-size:13.5px;font-weight:600;color:var(--navy-2)}
+.card .more:hover{color:var(--coral)}
+
+.list{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.list li{border-bottom:1px dashed var(--line);padding:13px 16px;display:flex;gap:12px;align-items:flex-start}
+.list li:last-child{border-bottom:0}
+.list .date{font-size:12.5px;color:var(--ink-3);flex:none;width:70px;font-variant-numeric:tabular-nums}
+.list .body{min-width:0;flex:1}
+.list .body a{font-weight:600;color:var(--navy)}
+.list .body a:hover{color:var(--coral)}
+.list .body p{font-size:13.5px;color:var(--ink-2);margin-top:3px}
+
+/* 频道索引 */
+.chan-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.chan{
+  display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius-s);padding:13px 14px;transition:transform .15s ease,border-color .15s ease;
+}
+.chan:hover{transform:translateY(-3px);border-color:var(--coral)}
+.chan b{font-size:15px;color:var(--navy)}
+.chan span{font-size:12.5px;color:var(--ink-3)}
+.chan em{font-style:normal;font-size:11.5px;color:var(--teal);font-weight:700}
+
+/* 标签索引 */
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags a{
+  font-size:13px;padding:5px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);
+  color:var(--ink-2);
+}
+.tags a:hover{border-color:var(--navy);color:var(--navy);background:#f0f3f9}
+.tags a.hot{border-color:var(--coral);color:var(--coral);background:var(--coral-soft)}
+
+/* 深度解析 */
+.deep{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:clamp(18px,3vw,32px);
+}
+.deep-grid{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:26px}
+.deep-aside{border-right:1px solid var(--line);padding-right:22px}
+.deep-aside h3{font-size:15px;color:var(--navy);margin-bottom:10px}
+.deep-aside p{font-size:13.5px;color:var(--ink-2);margin-bottom:14px}
+.factbox{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-s);padding:13px 14px;margin-bottom:12px}
+.factbox b{display:block;font-size:12px;color:var(--coral);letter-spacing:.08em;margin-bottom:6px}
+.factbox ul li{font-size:13px;color:var(--ink-2);padding-left:14px;position:relative;margin-bottom:5px}
+.factbox ul li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:1.5px;background:var(--ink-3)}
+.deep-body h3{font-size:18px;color:var(--navy);margin:22px 0 10px;padding-left:11px;border-left:4px solid var(--coral)}
+.deep-body h3:first-child{margin-top:0}
+.deep-body p{font-size:15px;color:var(--ink-2);margin-bottom:12px}
+.deep-body p b{color:var(--ink)}
+.deep-body .quote{
+  border-left:3px solid var(--gold);background:var(--gold-soft);padding:12px 14px;border-radius:0 var(--radius-s) var(--radius-s) 0;
+  font-size:14px;color:#5a4210;margin:14px 0;
+}
+.compare{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0;background:#fff}
+.compare th,.compare td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.compare th{background:#eef1f7;color:var(--navy);font-weight:700;white-space:nowrap}
+.timeline{list-style:none;margin:10px 0 4px;padding-left:0}
+.timeline li{position:relative;padding:0 0 14px 22px;font-size:14px;color:var(--ink-2)}
+.timeline li::before{content:"";position:absolute;left:4px;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 3px var(--coral-soft)}
+.timeline li::after{content:"";position:absolute;left:7.5px;top:1.35em;bottom:-2px;width:1.5px;background:var(--line)}
+.timeline li:last-child::after{display:none}
+.timeline b{color:var(--navy)}
+
+/* 对照面板 */
+.panel-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.panel header{padding:11px 16px;font-size:14px;font-weight:700;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.panel:nth-child(1) header{background:var(--navy)}
+.panel:nth-child(2) header{background:var(--teal)}
+.panel:nth-child(3) header{background:var(--coral)}
+.panel header span{font-size:11.5px;font-weight:500;opacity:.85}
+.panel .pl{padding:12px 16px}
+.panel dl{margin:0;font-size:13.5px}
+.panel dt{color:var(--ink-3);font-size:12px;margin-top:9px}
+.panel dt:first-child{margin-top:0}
+.panel dd{margin:1px 0 0;color:var(--ink-2)}
+
+/* 步骤 */
+.steps{counter-reset:st;display:grid;gap:12px}
+.step{
+  counter-increment:st;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:15px 16px 15px 58px;position:relative;box-shadow:var(--shadow);
+}
+.step::before{
+  content:counter(st,decimal-leading-zero);position:absolute;left:16px;top:14px;
+  font-size:15px;font-weight:800;color:var(--coral);background:var(--coral-soft);
+  width:30px;height:30px;display:grid;place-items:center;border-radius:8px;
+}
+.step h3{font-size:15.5px;color:var(--navy);margin-bottom:4px}
+.step p{font-size:13.5px;color:var(--ink-2)}
+
+/* 引语 */
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.quote-card{
+  background:linear-gradient(180deg,#fff 0%,#fbfaf6 100%);
+  border:1px solid var(--line);border-left:5px solid var(--gold);
+  border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);
+}
+.quote-card p{font-size:14.5px;color:var(--ink-2)}
+.quote-card cite{display:block;margin-top:10px;font-style:normal;font-size:12.5px;color:var(--ink-3)}
+.quote-card cite b{color:var(--navy)}
+
+/* 评论 */
+.cmts{display:grid;gap:12px}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.cmt-head{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--ink-3);margin-bottom:6px;flex-wrap:wrap}
+.avatar{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;flex:none}
+.cmt-head b{color:var(--navy);font-size:13.5px}
+.cmt p{font-size:14px;color:var(--ink-2)}
+.cmt .ref{font-size:12px;color:var(--teal);background:var(--teal-soft);padding:1px 7px;border-radius:4px}
+.cmt-foot{margin-top:8px;font-size:12px;color:var(--ink-3);display:flex;gap:14px}
+.cmt-foot button{border:0;background:none;color:var(--ink-3);font-size:12px;padding:2px 0}
+.cmt-foot button:hover{color:var(--coral)}
+
+/* FAQ */
+.faq{display:grid;gap:10px}
+details{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:0 16px;
+}
+details[open]{border-color:var(--navy-2)}
+summary{
+  cursor:pointer;padding:14px 30px 14px 0;font-size:15px;font-weight:600;color:var(--navy);
+  list-style:none;position:relative;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";position:absolute;right:2px;top:12px;font-size:19px;color:var(--coral);font-weight:700;line-height:1.2;
+}
+details[open] summary::after{content:"–"}
+details .ans{padding:0 0 15px;font-size:14px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:11px}
+details .ans b{color:var(--ink)}
+
+/* 榜单 */
+.rank{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.rank li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.rank li:last-child{border-bottom:0}
+.rank .no{font-weight:800;color:var(--coral);font-size:15px;font-variant-numeric:tabular-nums}
+.rank .no.top{color:var(--gold)}
+.rank .nm b{font-size:14.5px;color:var(--navy);display:block}
+.rank .nm span{font-size:12.5px;color:var(--ink-3)}
+.rank .sc{font-size:12.5px;color:var(--ink-2);text-align:right;font-variant-numeric:tabular-nums}
+.rank .sc b{color:var(--teal)}
+
+/* 侧栏 / 双栏 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:26px;align-items:start}
+.side{position:sticky;top:118px;display:grid;gap:16px}
+.side-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.side-box h3{font-size:14.5px;color:var(--navy);margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--coral-soft)}
+.side-nav a{display:block;font-size:13.5px;color:var(--ink-2);padding:6px 9px;border-radius:6px;border-left:2px solid transparent}
+.side-nav a:hover{background:var(--coral-soft);color:var(--coral)}
+.side-nav a.active{background:#eef1f7;color:var(--navy);font-weight:700;border-left-color:var(--coral)}
+.side-list li{font-size:13px;color:var(--ink-2);padding:7px 0;border-bottom:1px dashed var(--line)}
+.side-list li:last-child{border-bottom:0}
+.side-list a{color:var(--navy)}
+.side-list a:hover{color:var(--coral)}
+.side-list span{display:block;font-size:11.5px;color:var(--ink-3)}
+
+/* 页尾 */
+.site-foot{background:#121a29;color:#aeb9cc;margin-top:20px;font-size:13.5px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:26px;padding-block:40px 28px}
+.foot-brand b{color:#fff;font-size:17px;letter-spacing:.03em}
+.foot-brand p{margin-top:8px;color:#93a1b8;font-size:13px}
+.foot-col h4{color:#e6ecf6;font-size:13.5px;margin-bottom:9px;letter-spacing:.04em}
+.foot-col a{display:block;color:#a3b0c4;font-size:13px;padding:3px 0}
+.foot-col a:hover{color:#ffd166}
+.foot-note{border-top:1px solid #26324a;padding-block:14px;font-size:12px;color:#7f8ca3;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.foot-note em{font-style:normal;color:#ffd166}
+
+.totop{
+  position:fixed;right:18px;bottom:22px;z-index:60;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--navy);font-size:17px;font-weight:700;
+  box-shadow:var(--shadow);display:none;place-items:center;
+}
+.totop.show{display:grid}
+.totop:hover{background:var(--navy);color:#fff}
+
+/* 响应式 */
+@media (max-width:1000px){
+  .hero-inner{grid-template-columns:1fr;gap:22px;padding-block:38px 42px}
+  .hero-art{max-width:440px;min-height:0}
+  .layout{grid-template-columns:1fr}
+  .side{position:static;grid-row:2}
+  .deep-grid{grid-template-columns:1fr}
+  .deep-aside{border-right:0;border-bottom:1px solid var(--line);padding:0 0 16px}
+  .chan-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g2u{grid-template-columns:1fr}
+  .panel-row{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  body{font-size:15.5px}
+  [id]{scroll-margin-top:132px}
+  .menu-btn{display:inline-block}
+  .head-nav{
+    order:9;flex-basis:100%;display:none;border-top:1px solid var(--line);margin-top:8px;padding-top:8px;
+  }
+  .head-nav.open{display:flex}
+  .head-nav a{width:calc(50% - 4px)}
+  .search-box input{width:96px}
+  .search-box input:focus{width:112px}
+  .g3,.g2,.g2u,.chan-grid,.quotes,.foot-grid{grid-template-columns:1fr}
+  .sec{padding-block:32px}
+  .hero-facts{gap:16px}
+  .hero-fact b{font-size:20px}
+  .list li{flex-direction:column;gap:4px}
+  .list .date{width:auto}
+  .totop{right:12px;bottom:14px;width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="//#overview">跳到主要内容</a>
+
+<div class="stick-top">
+  <div class="notice" id="notice">
+    <div class="wrap">
+      <span class="notice-tag">公告</span>
+      <span class="notice-text"><strong>91传媒直播</strong> 11 月 8 日排期已更新：晚间 20:00「秋冬外套比价专场」换到 2 号间；原 21:30 才艺场调至 22:10，回放次日 10:00 上线。</span>
+      <a href="/#latest">查看更新记录</a>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="/#overview" aria-label="91传媒直播首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1b2a4a"></rect>
+          <circle cx="32" cy="29" r="12.5" fill="none" stroke="#e8543a" stroke-width="4"></circle>
+          <polygon points="28,22 28,36 39,29" fill="#ffd166"></polygon>
+          <rect x="15" y="47" width="34" height="5" rx="2.5" fill="#e8543a"></rect>
+          <rect x="24" y="56" width="16" height="3" rx="1.5" fill="#3c4f76"></rect>
+        </svg>
+        <span class="brand-text"><b>91传媒直播</b><span>栏目 · 排期 · 选品</span></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="headNav">栏目菜单</button>
+      <nav class="head-nav" id="headNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#latest">更新记录</a>
+        <a href="/#channels">频道索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#rank">热度榜</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="head-tools">
+        <div class="search-box" role="search">
+          <label for="siteSearch" class="skip">站内搜索</label>
+          <input id="siteSearch" type="search" placeholder="搜栏目、主播、专场" autocomplete="off">
+          <button id="searchBtn" type="button">查找</button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap"><p id="searchStatus" aria-live="polite"></p></div>
+  </header>
+</div>
+
+<main>
+  <!-- 首屏 -->
+  <section class="hero" id="overview">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hero-tag"><i></i>2026 年 11 月 · 第 45 周排期</span>
+        <h1>91传媒直播</h1>
+        <p class="hero-lead">把晚间 19:30—23:00 的场次按“比价带货、生活记录、才艺互动”三类拆开看：哪场先开、哪个间延迟、哪件商品补货，都落在具体时间与房间号上，不做笼统的口碑打包。</p>
+        <div class="hero-facts">
+          <div class="hero-fact"><b>9</b><span>当周常规栏目</span></div>
+          <div class="hero-fact"><b>23</b><span>已排定场次</span></div>
+          <div class="hero-fact"><b>6</b><span>合作品牌专场</span></div>
+          <div class="hero-fact"><b>48</b><span>条回放索引</span></div>
+        </div>
+        <div class="hero-acts">
+          <a class="btn btn-main" href="/#latest">看今日排期</a>
+          <a class="btn btn-ghost" href="/#guide">开播前核查清单</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 320" role="img">
+          <defs>
+            <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2b4272"></stop>
+              <stop offset="1" stop-color="#16233c"></stop>
+            </linearGradient>
+          </defs>
+          <rect x="14" y="30" width="300" height="180" rx="14" fill="url(#scr)" stroke="#3a5183" stroke-width="2"></rect>
+          <rect x="30" y="46" width="150" height="10" rx="5" fill="#4a6396"></rect>
+          <rect x="30" y="66" width="108" height="8" rx="4" fill="#334a78"></rect>
+          <circle cx="268" cy="80" r="17" fill="#e8543a"></circle>
+          <polygon points="262,72 262,88 275,80" fill="#fff"></polygon>
+          <rect x="30" y="96" width="86" height="72" rx="8" fill="#22365c" stroke="#3a5183"></rect>
+          <rect x="128" y="96" width="86" height="72" rx="8" fill="#22365c" stroke="#3a5183"></rect>
+          <rect x="226" y="96" width="72" height="72" rx="8" fill="#1d3056" stroke="#3a5183"></rect>
+          <rect x="38" y="152" width="70" height="7" rx="3.5" fill="#ffd166"></rect>
+          <rect x="136" y="152" width="52" height="7" rx="3.5" fill="#6f86b3"></rect>
+          <rect x="234" y="152" width="42" height="7" rx="3.5" fill="#6f86b3"></rect>
+          <rect x="14" y="222" width="300" height="3" rx="1.5" fill="#334a78"></rect>
+          <path d="M80 230 L80 268 L146 249 Z" fill="#e8543a"></path>
+          <rect x="164" y="236" width="120" height="9" rx="4.5" fill="#232f47"></rect>
+          <rect x="164" y="254" width="86" height="9" rx="4.5" fill="#1d2839"></rect>
+          <g fill="#ffd166">
+            <rect x="330" y="60" width="76" height="34" rx="8"></rect>
+            <rect x="330" y="106" width="58" height="12" rx="6" fill="#8a5c05"></rect>
+            <rect x="330" y="126" width="76" height="12" rx="6" fill="#3c4f76"></rect>
+          </g>
+          <circle cx="352" cy="182" r="19" fill="none" stroke="#e8543a" stroke-width="3"></circle>
+          <path d="M344 182 h16 M352 174 v16" stroke="#e8543a" stroke-width="3" stroke-linecap="round"></path>
+          <rect x="330" y="216" width="76" height="42" rx="8" fill="#16233c" stroke="#3a5183"></rect>
+          <rect x="340" y="228" width="40" height="7" rx="3.5" fill="#6f86b3"></rect>
+          <rect x="340" y="242" width="56" height="7" rx="3.5" fill="#334a78"></rect>
+        </svg>
+        <span class="hero-note">示意图：晚间三机位切换与场次卡片</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div>
+      <!-- 领域概览 -->
+      <section class="sec" id="topic">
+        <div class="sec-head">
+          <h2><span class="num">01</span>直播栏目怎么分：三类场次与各自节奏</h2>
+        </div>
+        <p class="lead-line">同一晚的场次差别不在热闹程度，而在<b>货品讲多久、互动占多少、剪辑回放能不能复用</b>。三类场次的时长与成本结构完全不同，混着比较容易失真。</p>
+        <div class="grid g3">
+          <article class="card">
+            <h3>比价带货专场</h3>
+            <p>19:30—21:00 最常见，单场 12—18 个 SKU，每个讲解 4—6 分钟。价格口令与库存数字是核心信息，主播语速快，回放剪成单品切片使用。</p>
+            <div class="meta"><span class="tag c">时长 90 分钟</span><span class="tag">2 号间</span></div>
+          </article>
+          <article class="card">
+            <h3>生活记录连麦</h3>
+            <p>21:00—22:00 档，主持人与两到三位固定连麦对象闲谈，插入产品不超过三个。信息密度低，但粉丝停留时长普遍在 25 分钟以上。</p>
+            <div class="meta"><span class="tag">时长 60 分钟</span><span class="tag">1 号间</span></div>
+          </article>
+          <article class="card">
+            <h3>才艺互动场</h3>
+            <p>22:10 之后开，含点歌、连麦挑战与投票环节，设备要求最高：三路机位加独立声卡。观众参与靠弹幕指令，回放价值低于直播实时。</p>
+            <div class="meta"><span class="tag g">时长 50 分钟</span><span class="tag">3 号间</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 精选内容推荐 -->
+      <section class="sec" id="featured">
+        <div class="sec-head">
+          <h2><span class="num">02</span>本周精选：四场值得按时间表蹲的场次</h2>
+          <span class="hint">按“信息完整度 + 讲解密度 + 回放可检索”三项打分选出，不含付费推荐。</span>
+        </div>
+        <div class="grid g2">
+          <article class="card">
+            <h3>秋冬外套比价专场（11 月 8 日 20:00）</h3>
+            <p>对比 8 款羽绒与 4 款羊毛大衣，主播会在第 30 分钟集中报一次到手价。上一场同类专场在 10 月 25 日，价差区间 60—140 元。</p>
+            <div class="meta"><span class="tag c">2 号间</span><span class="tag">货品 12 件</span></div>
+            <a class="more" href="/#latest">查看排期与换间说明 →</a>
+          </article>
+          <article class="card">
+            <h3>厨房小电实测：空气炸锅 4 台同烤</h3>
+            <p>11 月 6 日录制，主播用同一批鸡翅测四台机器的温差，结果记录在回放第 42 分钟。属于少数给出可复现步骤的带货场。</p>
+            <div class="meta"><span class="tag">1 号间</span><span class="tag">已回放</span></div>
+            <a class="more" href="/#guide">看实测方法 →</a>
+          </article>
+          <article class="card">
+            <h3>深夜点歌台第 18 期</h3>
+            <p>22:10 开，固定环节是“观众点歌 + 主播即兴改词”。第 17 期有观众连麦跑调被剪成切片，播放量 2.3 万，本期沿用同一点歌规则。</p>
+            <div class="meta"><span class="tag g">3 号间</span><span class="tag">才艺</span></div>
+            <a class="more" href="/#rank">看才艺场热度 →</a>
+          </article>
+          <article class="card">
+            <h3>产地直发水果拼单场</h3>
+            <p>11 月 5 日场次，主打赣南脐橙与琯溪蜜柚，承诺 48 小时发货。当天因物流临时改仓，预售链接延后 15 分钟上架，评论区有明确记录。</p>
+            <div class="meta"><span class="tag c">合作专场</span><span class="tag">生鲜</span></div>
+            <a class="more" href="/#comments">看观众反馈 →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="sec" id="latest">
+        <div class="sec-head">
+          <h2><span class="num">03</span>更新记录：排期、换间与回放上线</h2>
+        </div>
+        <ul class="list">
+          <li>
+            <span class="date">11-08</span>
+            <div class="body"><a href="/#latest">20:00 秋冬外套比价专场换至 2 号间</a>
+              <p>原 1 号间用于空气炸锅复测补拍，换间后开场时间不变，商品顺序与优惠口令同步调整。</p></div>
+          </li>
+          <li>
+            <span class="date">11-07</span>
+            <div class="body"><a href="/#latest">才艺场时段调整：21:30 改为 22:10</a>
+              <p>原因是 1 号间设备检修至 21:50，声卡与灯光重新校准，节目单顺序未变，点歌环节顺延。</p></div>
+          </li>
+          <li>
+            <span class="date">11-06</span>
+            <div class="body"><a href="/#guide">空气炸锅同烤实测回放上线</a>
+              <p>回放含四台机器温度曲线截图，第 42 分钟开始逐台记录，切片版本另发 3 条。</p></div>
+          </li>
+          <li>
+            <span class="date">11-05</span>
+            <div class="body"><a href="/#comments">水果拼单场预售链接延后 15 分钟</a>
+              <p>物流改仓导致发货地变更，主播在直播中口播两次，并在回放简介留了文字说明。</p></div>
+          </li>
+          <li>
+            <span class="date">11-03</span>
+            <div class="body"><a href="/#channels">新增“产地直发”频道，归档 6 场生鲜回放</a>
+              <p>频道按品类聚合，暂只收录有完整售后说明的场次，缺说明的场次留在原栏目。</p></div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="sec" id="channels">
+        <div class="sec-head">
+          <h2><span class="num">04</span>频道索引：按品类找场次</h2>
+          <span class="hint">共 10 个频道，每个频道下挂排期与回放两类索引。</span>
+        </div>
+        <div class="chan-grid">
+          <a class="chan" href="/#featured"><b>服装鞋包专场</b><span>外套、鞋靴、配饰</span><em>12 场</em></a>
+          <a class="chan" href="/#featured"><b>厨房小电实测</b><span>炸锅、破壁机、电饭煲</span><em>8 场</em></a>
+          <a class="chan" href="/#featured"><b>产地直发生鲜</b><span>脐橙、蜜柚、冷链</span><em>6 场</em></a>
+          <a class="chan" href="/#rank"><b>深夜点歌台</b><span>点歌、连麦、改词</span><em>18 期</em></a>
+          <a class="chan" href="/#rank"><b>才艺连麦挑战</b><span>翻唱、乐器、方言</span><em>11 场</em></a>
+          <a class="chan" href="/#guide"><b>开播前核查</b><span>设备、库存、售后</span><em>工具</em></a>
+          <a class="chan" href="/#deep"><b>场次成本拆解</b><span>时长、人效、回放</span><em>专题</em></a>
+          <a class="chan" href="/#latest"><b>排期与换间记录</b><span>房间号、时间调整</span><em>本周 5 条</em></a>
+          <a class="chan" href="/#comments"><b>观众反馈汇总</b><span>吐槽、好评、追问</span><em>32 条</em></a>
+          <a class="chan" href="/#faq"><b>新观众入门</b><span>口令、回放、售后</span><em>问答</em></a>
+        </div>
+        <div style="margin-top:18px">
+          <div class="tags">
+            <a class="hot" href="/#featured">羽绒服到手价对比</a>
+            <a href="/#featured">空气炸锅温差实测</a>
+            <a href="/#featured">赣南脐橙拼单</a>
+            <a href="/#rank">深夜点歌台连麦</a>
+            <a href="/#guide">直播设备三机位布置</a>
+            <a href="/#deep">带货场回放切片复用</a>
+            <a href="/#comments">生鲜发货地变更</a>
+            <a href="/#faq">优惠口令怎么核对</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="sec" id="deep">
+        <div class="sec-head">
+          <h2><span class="num">05</span>深度解析：晚间档的真正瓶颈是回放复用率</h2>
+        </div>
+        <div class="deep">
+          <div class="deep-grid">
+            <aside class="deep-aside">
+              <h3>可核对的三个结构</h3>
+              <div class="factbox">
+                <b>时间线</b>
+                <ul>
+                  <li>10-20 起统计连续 6 场带货</li>
+                  <li>11-02 记录 4 台炸锅温差</li>
+                  <li>11-05 水果场改仓延链 15 分钟</li>
+                  <li>11-08 外套场换间</li>
+                </ul>
+              </div>
+              <div class="factbox">
+                <b>数据面</b>
+                <ul>
+                  <li>90 分钟场产出约 14 条切片</li>
+                  <li>60 分钟闲谈场约 3 条</li>
+                  <li>切片平均复用 2.4 次</li>
+                </ul>
+              </div>
+              <p>判断可被推翻：若切片复用降至 1 次以下，结论应改写为“实时互动优先”。</p>
+            </aside>
+            <div class="deep-body">
+              <h3>判断一：90 分钟带货场的价值不在当晚 GMV，而在切片能撑多久</h3>
+              <p>10 月 20 日到 11 月 7 日的 6 场秋冬带货，单场 90 分钟，平均切出 14 条单品切片，其中 5 条在一周后仍有自然播放。同期 60 分钟的生活记录场只切出 3 条，因为闲聊段落缺少可独立的商品信息。</p>
+              <p>反过来说，切片数量不是越多越好：11 月 3 日那场破壁机专场切了 21 条，但其中 9 条内容重复，只是换了封面。重复切片拉低完播，后台数据显示这 9 条的完播率不足 18%，低于单品讲解类切片的 34%。<b>可复用的前提是每段有独立结论</b>，比如“某型号在 180 度时温差 9 度”，而非同一结论换角度重讲。</p>
+              <div class="quote">原话记录（11 月 2 日主播复盘）：“炸锅那场第 42 分钟以后才好剪，前面全是开箱，重复了三遍。”这句话指向的是内容结构，不是剪辑水平。</div>
+              <h3>判断二：换间会打乱货品顺序，成本比延迟开场更低</h3>
+              <p>11 月 8 日外套场从 1 号间换到 2 号间，时间不变，但商品顺序调整了。对比 10 月 25 日同类场次：那次因设备问题延迟 22 分钟开场，在线峰值从 1.8 万降至 1.1 万。换间没有损失开场流量，代价是主播需要重新记站位与提词器位置，第一件商品的讲解多了 40 秒。</p>
+              <table class="compare">
+                <caption style="caption-side:top;text-align:left;font-size:12.5px;color:#6b7688;padding-bottom:6px">两次异常处理对照</caption>
+                <thead><tr><th>处理方式</th><th>开场时间</th><th>峰值在线</th><th>遗留问题</th></tr></thead>
+                <tbody>
+                  <tr><td>延迟 22 分钟</td><td>20:22</td><td>1.1 万</td><td>前半段弹幕追问何时开始</td></tr>
+                  <tr><td>换间不延时</td><td>20:00</td><td>1.8 万</td><td>顺序调整，讲解多 40 秒</td></tr>
+                </tbody>
+              </table>
+              <p>这组对比能推出的结论有限：只覆盖两次事件，不能当成规律。但它足以反驳“宁可晚开也要在原场地”的做法，至少在流量层面不成立。</p>
+              <h3>判断三：生鲜场的信任成本集中在“发货地”三个字</h3>
+              <p>11 月 5 日水果拼单场因物流改仓，发货地从赣州换成南昌，预售链接延后 15 分钟。直播中口播两次，回放简介留了文字说明。观众评论里出现两类反应：一类追问“脐橙还是不是赣南的”，一类只关心“什么时候能到”。</p>
+              <ul class="timeline">
+                <li><b>19:50</b> 原定上架，运营发现仓库变更，暂停挂链</li>
+                <li><b>20:05</b> 主播口播说明改仓原因，承诺产地不变</li>
+                <li><b>20:12</b> 链接重新上架，前 100 单赠运费险</li>
+                <li><b>次日 09:30</b> 回放简介补充文字说明与发货时效</li>
+              </ul>
+              <p>把“产地”和“发货地”分开讲之后，追问量明显下降。这个处理方式值得沿用：<b>事实、影响、补救三句话按顺序说</b>，比反复道歉有效。至于赠运费险是否属于额外成本，目前没有公开数据，属于推测层面。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="sec" id="guide">
+        <div class="sec-head">
+          <h2><span class="num">06</span>体验指南：开播前五分钟该核对什么</h2>
+          <span class="hint">写给第一次蹲场次的观众，也写给需要自查的主播团队。</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>核对房间号与开场时间</h3>
+            <p>公告条里的换间信息优先于旧节目单。11 月 8 日外套场在 2 号间，1 号间当日 20:00 在补拍炸锅复测，走错间会看到无关画面。</p>
+          </div>
+          <div class="step">
+            <h3>确认优惠口令的有效范围</h3>
+            <p>口令通常绑定单品与时段，例如“全场 30 号链接立减 40”只在当场上架期间有效。回放里出现的口令多数已过期，别直接照抄。</p>
+          </div>
+          <div class="step">
+            <h3>看商品讲解是否给出可复现条件</h3>
+            <p>炸锅实测写明了 180 度、12 分钟、同一批鸡翅，这类条件才是判断依据。只报“好用、省电”的段落，跳过不影响理解。</p>
+          </div>
+          <div class="step">
+            <h3>生鲜场先看发货时效与售后说明</h3>
+            <p>11 月 5 日场次承诺 48 小时发货，改仓后仍维持该时效。没有标注时效与坏果赔付比例的场次，建议先观望。</p>
+          </div>
+          <div class="step">
+            <h3>互动环节遵守点歌与连麦规则</h3>
+            <p>点歌台按弹幕时间排序，连麦需提前在公屏打“1”。第 17 期有 3 位观众因重复刷屏被跳过，规则在开场 5 分钟内口播一次。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 对照面板 -->
+      <section class="sec" id="compare">
+        <div class="sec-head">
+          <h2><span class="num">07</span>三类场次对照：时长、机位、回放价值</h2>
+        </div>
+        <div class="panel-row">
+          <article class="panel">
+            <header>比价带货 <span>19:30—21:00</span></header>
+            <div class="pl"><dl>
+              <dt>机位</dt><dd>2 机位，主机位 + 商品特写</dd>
+              <dt>人力</dt><dd>主播 1、场控 1、助理 1</dd>
+              <dt>回放复用</dt><dd>高，切片 10 条以上</dd>
+              <dt>翻车风险</dt><dd>库存与价格口误</dd>
+            </dl></div>
+          </article>
+          <article class="panel">
+            <header>生活记录 <span>21:00—22:00</span></header>
+            <div class="pl"><dl>
+              <dt>机位</dt><dd>1 机位，桌面固定</dd>
+              <dt>人力</dt><dd>主播 1、场控 1</dd>
+              <dt>回放复用</dt><dd>低，切片 2—3 条</dd>
+              <dt>翻车风险</dt><dd>话题跑偏、冷场</dd>
+            </dl></div>
+          </article>
+          <article class="panel">
+            <header>才艺互动 <span>22:10 起</span></header>
+            <div class="pl"><dl>
+              <dt>机位</dt><dd>3 机位，含独立声卡</dd>
+              <dt>人力</dt><dd>主播 1、导播 1、场控 1</dd>
+              <dt>回放复用</dt><dd>中，切片 5—8 条</dd>
+              <dt>翻车风险</dt><dd>设备延迟、连麦杂音</dd>
+            </dl></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 用户证言 -->
+      <section class="sec" id="voices">
+        <div class="sec-head">
+          <h2><span class="num">08</span>主播与场控的说法：哪些经验能直接抄</h2>
+        </div>
+        <div class="quotes">
+          <div class="quote-card">
+            <p>“外套场我一定把到手价写在白板上，镜头扫一次比口播三遍都管用。上次 10 月 25 日那场，白板写错一个价，弹幕立刻纠正，后面就再没写错过。”</p>
+            <cite><b>林越</b> · 带货场主播，参与 10 月 25 日、11 月 8 日两场外套专场</cite>
+          </div>
+          <div class="quote-card">
+            <p>“点歌台最怕观众点同一首。第 17 期前 20 分钟有 7 个人点同一首歌，我改成按楼层抽，抽中的那位置顶三次，后面就顺了。”</p>
+            <cite><b>周屿</b> · 深夜点歌台主持，第 1—18 期</cite>
+          </div>
+          <div class="quote-card">
+            <p>“生鲜场链接上架前，我习惯先自己下单试一遍，看发货地会不会跳。11 月 5 日那次就是试的时候发现改仓的。”</p>
+            <cite><b>陈嘉禾</b> · 场控，负责水果拼单场挂链</cite>
+          </div>
+          <div class="quote-card">
+            <p>“三机位不是越多越好，才艺场如果导播不熟，切错画面的概率比单机位高。我们 10 月换过一次导播，前 15 分钟切错了 4 次。”</p>
+            <cite><b>许知临</b> · 导播，才艺场与连麦挑战</cite>
+          </div>
+        </div>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="sec" id="comments">
+        <div class="sec-head">
+          <h2><span class="num">09</span>观众评论：好评、追问与直白的吐槽</h2>
+        </div>
+        <div class="cmts">
+          <article class="cmt">
+            <div class="cmt-head"><span class="avatar" style="background:#1b2a4a">阿</span><b>阿棠</b><span>11 月 8 日 20:41</span><span class="ref">秋冬外套比价专场</span></div>
+            <p>换到 2 号间之后镜头有点偏，白板反光遮了第三件衣服的价签，主播念了两次我才听清是 499。</p>
+            <div class="cmt-foot"><button type="button">有帮助 12</button><span>回复 2</span></div>
+          </article>
+          <article class="cmt">
+            <div class="cmt-head"><span class="avatar" style="background:#1f6f66">老</span><b>老顾不加班</b><span>11 月 7 日 22:56</span><span class="ref">深夜点歌台第 18 期</span></div>
+            <p>点歌规则改了之后公平多了。上期连刷三条的被跳过，这次没人刷屏。就是 22:56 才轮到第二首，太晚了。</p>
+            <div class="cmt-foot"><button type="button">有帮助 31</button><span>回复 5</span></div>
+          </article>
+          <article class="cmt">
+            <div class="cmt-head"><span class="avatar" style="background:#c98a1b">南</span><b>南桥</b><span>11 月 6 日 21:12</span><span class="ref">空气炸锅同烤实测</span></div>
+            <p>第 42 分钟那段温差记录是真的有用，四台机器差 9 度。就是前面开箱拖太久，开了 18 分钟才进正题。</p>
+            <div class="cmt-foot"><button type="button">有帮助 27</button><span>回复 3</span></div>
+          </article>
+          <article class="cmt">
+            <div class="cmt-head"><span class="avatar" style="background:#3c4757">柚</span><b>柚子妈</b><span>11 月 5 日 20:33</span><span class="ref">产地直发水果拼单场</span></div>
+            <p>发货地换了为什么不提前说？等到上架才口播，我购物车都准备好了。脐橙本身没问题，但这个流程要改。</p>
+            <div class="cmt-foot"><button type="button">有帮助 45</button><span>回复 8</span></div>
+          </article>
+          <article class="cmt">
+            <div class="cmt-head"><span class="avatar" style="background:#5a4210">一</span><b>一只梨</b><span>11 月 4 日 22:20</span><span class="ref">才艺连麦挑战</span></div>
+            <p>连麦杂音有点劝退，第二段伴奏和人声对不上。第 14 期的时候还没这个问题，是不是换了声卡驱动。</p>
+            <div class="cmt-foot"><button type="button">有帮助 19</button><span>回复 4</span></div>
+          </article>
+          <article class="cmt">
+            <div class="cmt-head"><span class="avatar" style="background:#1b2a4a">路</span><b>路过的猫</b><span>11 月 3 日 19:08</span><span class="ref">生活记录连麦</span></div>
+            <p>这类场就适合吃饭时候挂着听，不像带货那么吵。不过上周那场聊到一半接了个电话，回来话题就断了，听着有点跳。</p>
+            <div class="cmt-foot"><button type="button">有帮助 8</button><span>回复 1</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="sec" id="news">
+        <div class="sec-head">
+          <h2><span class="num">10</span>相关资讯：设备、规则与平台侧的变动</h2>
+        </div>
+        <ul class="list">
+          <li>
+            <span class="date">11-07</span>
+            <div class="body"><a href="/#news">1 号间声卡与灯光检修至 21:50</a>
+              <p>检修单写明更换声卡驱动并重新校准色温，直接导致才艺场顺延 40 分钟。</p></div>
+          </li>
+          <li>
+            <span class="date">11-06</span>
+            <div class="body"><a href="/#news">平台侧新增回放简介文字位</a>
+              <p>回放简介可以写 200 字以内的说明，11 月 5 日水果场是首个用上的场次，把改仓信息写在了第二行。</p></div>
+          </li>
+          <li>
+            <span class="date">11-04</span>
+            <div class="body"><a href="/#news">双十一预热期排期压缩，单场控制在 90 分钟内</a>
+              <p>运营给出的理由是观众停留时长在 75 分钟后明显下降，10 月 25 日那场 112 分钟，后 37 分钟在线掉了 43%。</p></div>
+          </li>
+          <li>
+            <span class="date">11-02</span>
+            <div class="body"><a href="/#news">点歌台增加楼层抽选工具</a>
+              <p>工具在第 17 期首次使用，抽中楼层置顶三次，替代按弹幕顺序排列的旧规则。</p></div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- FAQ -->
+      <section class="sec" id="faq">
+        <div class="sec-head">
+          <h2><span class="num">11</span>常见问题：口令、回放、售后与换间</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>优惠口令在回放里还能用吗？</summary>
+            <div class="ans">多数不能。口令绑定时段与单品，例如 11 月 8 日外套场的“30 号链接立减 40”只在当晚 20:00—21:00 有效。回放会在简介注明失效时间，没注明的按失效处理。</div>
+          </details>
+          <details>
+            <summary>场次换房间之后，原来的排期表还准吗？</summary>
+            <div class="ans">时间准、房间号不准。11 月 8 日外套场从 1 号间换到 2 号间，开场仍是 20:00。以公告条和更新记录为准，旧节目单的房间号会在当日 18:00 前标红。</div>
+          </details>
+          <details>
+            <summary>生鲜场改发货地，脐橙产地会变吗？</summary>
+            <div class="ans">产地与发货地是两件事。11 月 5 日场次产地仍是赣南，发货地由赣州改为南昌，主播在 20:05 口播说明，并承诺 48 小时发货时效不变。坏果赔付比例写在商品详情页，未变动。</div>
+          </details>
+          <details>
+            <summary>空气炸锅实测的温度数据在哪一段？</summary>
+            <div class="ans">回放第 42 分钟开始，四台机器依次记录，最高与最低温差 9 度发生在 180 度、12 分钟条件下，同一批鸡翅。切片版把这段单独剪成 3 条，标题里带“温差 9 度”。</div>
+          </details>
+          <details>
+            <summary>点歌台连麦要提前准备什么？</summary>
+            <div class="ans">耳机、安静环境、一首准备的歌。连麦按公屏“1”的先后顺序，第 18 期起改为楼层抽选，抽中后置顶三次。伴奏由主播端提供，自备伴奏容易与人声对不上。</div>
+          </details>
+          <details>
+            <summary>没看到直播，回放多久上线？</summary>
+            <div class="ans">常规场次次日 10:00 上线，才艺场因剪辑复杂延至次日 14:00。11 月 7 日才艺场顺延到 22:10 开播，回放上线时间仍是 11 月 8 日 14:00，未受影响。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="sec" id="related">
+        <div class="sec-head">
+          <h2><span class="num">12</span>相关推荐：按你能核对的信息挑</h2>
+        </div>
+        <div class="tags">
+          <a class="hot" href="/#deep">90 分钟带货场切片复用率</a>
+          <a href="/#deep">换间与延迟开场的流量对比</a>
+          <a href="/#guide">炸锅同烤的可复现条件</a>
+          <a href="/#guide">生鲜场发货时效核对表</a>
+          <a href="/#rank">深夜点歌台楼层抽选规则</a>
+          <a href="/#rank">才艺场三机位切换记录</a>
+          <a href="/#comments">水果拼单场改仓反馈</a>
+          <a href="/#news">回放简介文字位使用说明</a>
+          <a href="/#voices">导播谈切错画面概率</a>
+          <a href="/#faq">优惠口令失效时间怎么看</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side" aria-label="侧栏导航与快讯">
+      <nav class="side-box side-nav" id="sideNav" aria-label="栏内导航">
+        <h3>栏内导航</h3>
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#latest">更新记录</a>
+        <a href="/#channels">频道索引</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#compare">三类场次对照</a>
+        <a href="/#voices">主播证言</a>
+        <a href="/#comments">观众评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#related">相关推荐</a>
+      </nav>
+      <div class="side-box">
+        <h3>今晚时间表</h3>
+        <ul class="side-list">
+          <li><a href="/#latest">20:00 秋冬外套比价专场</a><span>2 号间 · 90 分钟</span></li>
+          <li><a href="/#latest">21:00 生活记录连麦</a><span>1 号间 · 60 分钟</span></li>
+          <li><a href="/#latest">22:10 深夜点歌台第 18 期</a><span>3 号间 · 50 分钟</span></li>
+          <li><a href="/#news">21:50 前 1 号间完成检修</a><span>声卡与灯光</span></li>
+        </ul>
+      </div>
+      <div class="side-box">
+        <h3>热度榜前三</h3>
+        <ul class="side-list">
+          <li><a href="/#rank">空气炸锅同烤实测</a><span>回放 1.6 万次</span></li>
+          <li><a href="/#rank">深夜点歌台第 17 期</a><span>切片 2.3 万次</span></li>
+          <li><a href="/#rank">秋冬外套比价专场</a><span>峰值 1.8 万</span></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 热度榜 / 补充板块 -->
+  <section class="sec" id="rank">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="num">13</span>本周热度榜：按回放与切片数据排</h2>
+        <span class="hint">统计口径为 11 月 2 日至 11 月 8 日已上线回放，含切片播放，不含预告页点击。</span>
+      </div>
+      <div class="grid g2u">
+        <ul class="rank">
+          <li><span class="no top">01</span><span class="nm"><b>空气炸锅 4 台同烤实测</b><span>11-06 回放 · 温差 9 度段落被反复引用</span></span><span class="sc"><b>1.6 万</b><br>回放</span></li>
+          <li><span class="no top">02</span><span class="nm"><b>深夜点歌台第 17 期</b><span>10-31 直播 · 跑调切片 2.3 万</span></span><span class="sc"><b>2.3 万</b><br>切片</span></li>
+          <li><span class="no top">03</span><span class="nm"><b>秋冬外套比价专场</b><span>11-08 直播 · 换间后峰值未跌</span></span><span class="sc"><b>1.8 万</b><br>峰值</span></li>
+          <li><span class="no">04</span><span class="nm"><b>产地直发水果拼单场</b><span>11-05 直播 · 改仓说明被单独剪辑</span></span><span class="sc"><b>9,400</b><br>回放</span></li>
+          <li><span class="no">05</span><span class="nm"><b>生活记录连麦 11 月第 1 场</b><span>11-03 直播 · 停留时长 27 分钟</span></span><span class="sc"><b>6,800</b><br>回放</span></li>
+          <li><span class="no">06</span><span class="nm"><b>才艺连麦挑战第 14 期</b><span>10-29 直播 · 声卡问题前的对照样本</span></span><span class="sc"><b>5,100</b><br>回放</span></li>
+        </ul>
+        <div class="card">
+          <h3>榜单怎么读</h3>
+          <p>回放与切片分开统计：切片播放高不代表整场好看，第 17 期的 2.3 万次集中在跑调那 40 秒。反过来，外套场峰值高但切片少，因为价签信息只对当晚有效。</p>
+          <p>才艺场第 14 期排在第 6，恰好是声卡出问题之前，可以拿来对照 11 月 4 日那场的杂音评论。</p>
+          <div class="meta"><span class="tag">口径说明</span><span class="tag c">含切片</span></div>
+          <a class="more" href="/#comments">看对应场次的观众评论 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <b>91传媒直播</b>
+      <p>把晚间档拆成可核对的时间、房间号与商品条目，帮观众在开场前就知道该看哪一段。</p>
+    </div>
+    <div class="foot-col">
+      <h4>栏目</h4>
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选推荐</a>
+      <a href="/#latest">更新记录</a>
+      <a href="/#deep">深度解析</a>
+    </div>
+    <div class="foot-col">
+      <h4>查找</h4>
+      <a href="/#channels">频道索引</a>
+      <a href="/#rank">本周热度榜</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+    </div>
+    <div class="foot-col">
+      <h4>数据说明</h4>
+      <p style="font-size:12.5px;color:#93a1b8">页面内场次、时间、房间号、商品与评论均为示例数据，用于展示栏目结构；评论人名与主播名同为示例，不对应真实个人。</p>
+    </div>
+  </div>
+  <div class="wrap foot-note">
+    <span>内容更新：2026 年 11 月 8 日，对应「20:00 外套场换至 2 号间」与「才艺场顺延至 22:10」两条更新记录。</span>
+    <span><em>示例站点</em> · 版权文字以运营方资料为准</span>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+  var menuBtn=document.getElementById("menuBtn");
+  var headNav=document.getElementById("headNav");
+  if(menuBtn&&headNav){
+    menuBtn.addEventListener("click",function(){
+      var open=headNav.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded",open?"true":"false");
+    });
+    headNav.addEventListener("click",function(e){
+      if(e.target.tagName==="A"&&window.innerWidth<=760){
+        headNav.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded","false");
+      }
+    });
+  }
+
+  // 搜索：本地查找
+  var input=document.getElementById("siteSearch");
+  var btn=document.getElementById("searchBtn");
+  var status=document.getElementById("searchStatus");
+  var sections=Array.prototype.slice.call(document.querySelectorAll("main section[id], section[id]"));
+  function runSearch(){
+    var q=(input.value||"").trim();
+    if(!q){status.innerHTML="";return;}
+    var hits=[];
+    var all=document.querySelectorAll("main h2, main h3, main .card p, main .list .body a, main summary, main .tags a, main .cmt p, main .quote-card p");
+    all.forEach(function(el){
+      if(el.textContent.indexOf(q)>-1){
+        var sec=el.closest("section[id]");
+        if(sec&&hits.indexOf(sec)<0)hits.push(sec);
+      }
+    });
+    if(hits.length===0){
+      status.innerHTML="没有找到与“<b>"+q.replace(/[<>&]/g,"")+"</b>”匹配的栏目或条目，可试“外套”“点歌台”“炸锅”“发货地”。";
+      return;
+    }
+    status.innerHTML="找到 "+hits.length+" 个相关栏目："+hits.slice(0,4).map(function(s){
+      var h=s.querySelector("h2");
+      return "<a href='/#"+s.id+"'>"+(h?h.textContent.replace(/^\s*\d+\s*/,""):s.id)+"</a>";
+    }).join("、")+"。";
+  }
+  if(btn&&input){
+    btn.addEventListener("click",runSearch);
+    input.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();runSearch();}});
+  }
+
+  // 回到顶部
+  var toTop=document.getElementById("toTop");
+  function onScroll(){
+    if(window.scrollY>480){toTop.classList.add("show");}else{toTop.classList.remove("show");}
+    highlight();
+  }
+  toTop.addEventListener("click",function(){
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+
+  // 侧栏滚动高亮
+  var sideLinks=Array.prototype.slice.call(document.querySelectorAll("#sideNav a"));
+  var targets=sideLinks.map(function(a){
+    var id=a.getAttribute("href").split("#")[1];
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos=window.scrollY+140;
+    var idx=-1;
+    targets.forEach(function(t,i){
+      if(t&&t.offsetTop<=pos)idx=i;
+    });
+    sideLinks.forEach(function(a,i){
+      a.classList.toggle("active",i===idx);
+    });
+  }
+  window.addEventListener("scroll",onScroll,{passive:true});
+  window.addEventListener("resize",onScroll);
+  onScroll();
+})();
+</script>
+</body>
+                                    </html>
